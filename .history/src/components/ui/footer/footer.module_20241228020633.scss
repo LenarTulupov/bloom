@@ -1,0 +1,19 @@
+.footer {
+  height: var(--footer-height);
+  background-color: var(--black-color);
+  &__company {
+    &-description {
+      color: var(--white-color);
+    }
+    &-list {
+      color: var(--white-color);
+    }
+    &-link {
+      display: flex;
+      align-items: center;
+      column-gap: 8px;
+      padding: 8px 0;
+    }
+  }
+  &__pri
+}

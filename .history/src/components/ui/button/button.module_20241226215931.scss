@@ -1,0 +1,19 @@
+.button {
+  padding: 10px 36px;
+  border-radius: var(--border-radius);
+  color: var(--white-color);
+
+}
+
+.purple {
+  background-color: var(--accent-color);
+  &:hover {
+    background-color: var(--accent);
+  }
+}
+.white {
+
+}
+.yellow {
+
+}

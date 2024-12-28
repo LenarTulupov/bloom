@@ -1,0 +1,9 @@
+.footer {
+  height: var(--footer-height);
+  background-color: var(--black-color);
+  &__privacy {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+  }
+}

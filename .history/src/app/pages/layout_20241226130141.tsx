@@ -1,0 +1,9 @@
+interface IPagesLayo
+
+export default function PagesLayout() {
+  return (
+    <header>
+      {children}
+    </header>
+  )
+};

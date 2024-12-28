@@ -1,0 +1,10 @@
+.footer {
+  padding-top: 88px;
+  padding-bottom: 58px;
+  height: var(--footer-height);
+  background-color: var(--black-color);
+  &__content {
+    display: flex;
+    column-gap: 80px;
+  }
+}
