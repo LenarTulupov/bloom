@@ -2,7 +2,8 @@
   padding: 10px 36px;
   border-radius: var(--border-radius-middle);
   color: var(--white-color);
-
+  border: none;
+  font-weight: bold;
 }
 
 .purple {
@@ -13,7 +14,8 @@
   }
 }
 .white {
-
+  background-color: var(--white-color);
+  color: var(--accent-color);
 }
 .yellow {
 

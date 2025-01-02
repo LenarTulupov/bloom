@@ -1,30 +1,38 @@
 import Link from "next/link";
-import { ReactNode } from "react";
+import { IButton } from "@/types/button.interface";
 import styles from './button.module.scss';
 
-interface IButton {
-  children: ReactNode;
-  href: string;
-  color?: 'purple' | 'white' | 'yellow';
-  className?: string;
-}
-
 export default function Button({ 
+  link = false,
   children, 
   href, 
   color = 'purple', 
+  type = 'button',
+  onClick,
   className }: IButton) {
-  return (
-    <Link
-      className={`
+    const buttonClassName = `
         ${styles.button} 
         ${className || ''}
         ${styles[color]}
-      `}
-      href={href}
-      color={color}
+      `;
+
+    if(href) {
+      return (
+        <Link 
+          href={href} 
+          className={buttonClassName}
+        >
+          { children }
+        </Link>
+      )
+    }
+  return (
+    <button 
+      type={type} 
+      className={buttonClassName}
+      onClick={onClick}
     >
-      {children}
-    </Link>
+        {children}
+      </button>
   )
 };

@@ -1,0 +1,16 @@
+.footer-address {
+  width: 252px;
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    margin-top: 24px;
+  }
+  &__item {
+    display: flex;
+    column-gap: 8px;
+    &-text {
+      color: var(--white-color);
+    }
+  }
+}

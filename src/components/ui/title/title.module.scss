@@ -1,6 +1,29 @@
 .title {
-
+  font-family: var(--font-second);
+  font-weight: 600;
 }
 .white {
   color: var(--white-color)
+}
+
+.large {
+  font-size: 72px;
+}
+.big {
+  font-size: 64px;
+}
+.middle {
+  font-size: 48px;
+}
+.small {
+  font-size: 24px;
+}
+
+.background {
+  color: var(--accent-color);
+  background-color: rgba(127, 57, 177, .2);
+  padding: 8px 20px;
+  width: fit-content;
+  border-radius: 50px;
+  border: 1px solid rgba(127, 57, 177, .1);
 }

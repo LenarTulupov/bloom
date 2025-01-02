@@ -1,5 +1,5 @@
 import { socialButtons } from "@/constants/social-buttons";
-import SocialButton from "../../../social-button/social-button";
+import SocialButton from "@/components/ui/social-button/social-button";
 import styles from './footer-socials.module.scss';
 
 export default function FooterSocials() {

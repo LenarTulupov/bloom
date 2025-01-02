@@ -1,9 +1,14 @@
 .header {
+  display: flex;
+  align-items: center;
   height: var(--header-height);
   background-color: var(--white-color);
   &__content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  &__container {
+    width: 100%;
   }
 }

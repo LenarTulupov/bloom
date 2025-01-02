@@ -1,0 +1,19 @@
+.welcome-section__content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  padding: 106px 0 119px;
+  width: 656px;
+  &-color {
+    color: var(--accent-color);
+  }
+  &-description {
+    width: 459px;
+  }
+  &-button {
+    width: fit-content;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    cursor: pointer;
+  }
+}

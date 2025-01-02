@@ -1,6 +1,8 @@
 .footer__links {
+  width: 125px;
   &-list {
     color: var(--white-color);
+    margin-top: 24px;
   }
   &-link {
     display: flex;
