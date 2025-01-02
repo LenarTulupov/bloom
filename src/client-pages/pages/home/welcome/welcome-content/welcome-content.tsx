@@ -23,7 +23,6 @@ export default function WelcomeContent() {
         care.
       </Text>
       <Button
-        link
         href="/contact-us"
         className={styles["welcome-section__content-button"]}
       >
