@@ -5,7 +5,6 @@ export interface IButton {
   href?: string;
   color?: "purple" | "white" | "yellow";
   className?: string;
-  link?: boolean;
   type?: "button" | "submit";
   onClick?: () => void;
 }

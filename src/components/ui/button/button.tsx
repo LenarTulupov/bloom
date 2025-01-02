@@ -3,7 +3,6 @@ import { IButton } from "@/types/button.interface";
 import styles from './button.module.scss';
 
 export default function Button({ 
-  link = false,
   children, 
   href, 
   color = 'purple', 
