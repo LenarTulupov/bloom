@@ -1,4 +1,4 @@
-import { HTMLAttributes, ReactNode } from 'react';
+import { ElementType, HTMLAttributes, ReactNode } from 'react';
 import styles from './title.module.scss';
 
 interface ITitle extends HTMLAttributes<HTMLHeadingElement> {
@@ -8,18 +8,21 @@ interface ITitle extends HTMLAttributes<HTMLHeadingElement> {
   color?: 'white' | 'black';
   size: 'large' | 'big' | 'middle' | 'small';
   background?: boolean;
+  h?: 1 | 2 | 3 | 4 | 5 | 6;
 }
 
 export default function Title({
   title,
   children,
   className,
-  color = 'white',
+  color = 'black',
   size,
   background = false,
+  h = 2,
   ...props }: ITitle) {
+    const Tag: ElementType = `h${h}`
   return (
-    <h1
+    <Tag
       className={`
         ${styles.title} 
         ${className || ''}
@@ -30,6 +33,6 @@ export default function Title({
       {...props}
     >
       {title || children }
-    </h1>
+    </Tag>
   )
 };

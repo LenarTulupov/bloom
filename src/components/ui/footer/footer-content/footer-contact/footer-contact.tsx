@@ -15,7 +15,8 @@ export default function FooterContact() {
           <InputText placeholder="Full Name" />
           <InputText placeholder="Phone Number" />
           <InputText placeholder="Email" />
-          <InputText placeholder="Message" />
+          <textarea placeholder="Message"></textarea>
+          {/* <InputText placeholder="Message" /> */}
         </div>
         <div className={styles["form__button-wrapper"]}>
           <Button className={styles.form__button} type="submit">

@@ -1,7 +1,7 @@
 import Button from "@/components/ui/button/button";
-import Text from "@/components/ui/text/text";
 import Title from "@/components/ui/title/title";
 import styles from "./welcome-content.module.scss";
+import Description from "@/components/ui/description/description";
 
 export default function WelcomeContent() {
   return (
@@ -11,17 +11,17 @@ export default function WelcomeContent() {
         title="Turning Parenthood Dreams into Reality"
         background
       />
-      <Title size="big" color="black">
-        Welcome to{" "}
+      <Title size="big" color="black" h={1}>
+        Welcome to&nbsp;
         <span className={styles["welcome-section__content-color"]}>
           NewBloom Surrogacy
-        </span>{" "}
+        </span>&nbsp;
         Agency
       </Title>
-      <Text className={styles["welcome-section__content-description"]}>
+      <Description size="md" className={styles["welcome-section__content-description"]}>
         trusted surrogacy services in Georgia with transparency, speed, and
         care.
-      </Text>
+      </Description>
       <Button
         href="/contact-us"
         className={styles["welcome-section__content-button"]}
