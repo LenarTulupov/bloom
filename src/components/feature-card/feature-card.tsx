@@ -1,17 +1,7 @@
 import Title from "../ui/title/title";
 import Description from "../ui/description/description";
+import { IFeatureCard } from "@/types/feature-card.interface";
 import styles from "./feature-card.module.scss";
-
-export interface IFeatureCard {
-  id: number;
-  title: string;
-  description?: boolean;
-  text?: string;
-  items: {
-    id: number;
-    title: string;
-  }[];
-}
 
 export default function FeatureCard({
   title,
@@ -20,11 +10,11 @@ export default function FeatureCard({
   items,
 }: IFeatureCard) {
   return (
-    <div className={styles["feature-card"]}>
+    <article className={styles["feature-card"]}>
       <Title
         h={3}
         className={styles["feature-card__title"]}
-        size="small"
+        size="xs"
         title={title}
         color="black"
       />
@@ -44,6 +34,6 @@ export default function FeatureCard({
           ))}
         </ul>
       </div>
-    </div>
+    </article>
   );
 }

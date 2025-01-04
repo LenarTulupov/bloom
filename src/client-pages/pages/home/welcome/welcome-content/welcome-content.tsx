@@ -7,11 +7,11 @@ export default function WelcomeContent() {
   return (
     <div className={styles["welcome-section__content"]}>
       <Title
-        size="small"
+        size="xs"
         title="Turning Parenthood Dreams into Reality"
         background
       />
-      <Title size="big" color="black" h={1}>
+      <Title size="lg" color="black" h={1}>
         Welcome to&nbsp;
         <span className={styles["welcome-section__content-color"]}>
           NewBloom Surrogacy

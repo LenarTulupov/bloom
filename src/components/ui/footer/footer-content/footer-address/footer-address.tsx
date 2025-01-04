@@ -5,7 +5,7 @@ import styles from './footer-address.module.scss';
 export default function FooterAddress() {
   return (
     <div className={styles['footer-address']}>
-      <Title size="small" title="Our Address" />
+      <Title size="xs" title="Our Address" />
       <ul className={styles['footer-address__list']}>
         <li className={styles['footer-address__item']}>
           <Image alt="location" src="/icons/location.svg" width={24} height={24}/>

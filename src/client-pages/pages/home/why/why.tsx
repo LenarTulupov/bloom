@@ -19,7 +19,6 @@ export default function Why() {
             height={228}
           />
           <Title
-            size="middle"
             title="Why Choose NewBloom?"
             className={styles["why-section__content-title"]}
           />

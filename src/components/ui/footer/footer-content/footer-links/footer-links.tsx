@@ -7,7 +7,7 @@ import styles from "./footer-links.module.scss";
 export default function FooterLinks() {
   return (
     <div className={styles["footer__links"]}>
-      <Title size="small" title="Useful Links" />
+      <Title size="xs" title="Useful Links" />
       <ul className={styles["footer__links-list"]}>
         {usefulLinks.map((item) => (
           <li key={item.id} className={styles["footer__links-item"]}>

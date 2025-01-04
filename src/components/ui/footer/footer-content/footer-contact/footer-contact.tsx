@@ -6,7 +6,7 @@ import styles from "./footer-contact.module.scss";
 export default function FooterContact() {
   return (
     <div className={styles.footer__contact}>
-      <Title size="small" title="Contact us" />
+      <Title size="xs" title="Contact us" />
       <form
         // onSubmit={}
         className={`${styles["footer__contact-form"]} ${styles.form}`}

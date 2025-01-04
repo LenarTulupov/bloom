@@ -7,10 +7,9 @@ export default function AboutContent() {
   return (
     <div className={styles.about__content}>
       <div className={styles["about__content-text"]}>
-        <Title h={3} size="small" title="About Us" color="white" />
+        <Title h={3} size="xs" title="About Us" color="white" />
         <Title
           title="Together, We Make Parenthood Possible"
-          size="middle"
           color="white"
         />
         <Description size="md" color="white">
