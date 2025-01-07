@@ -1,20 +1,6 @@
-import Footer from "@/components/ui/footer/footer";
-import Header from "@/components/ui/header/header";
+import LayoutsPagesLayout from "@/layouts/pages-layout/pages-layout";
 import { ReactNode } from "react";
-import styles from './layout.module.scss';
 
-interface IPagesLayout {
-  children: ReactNode;
-}
-
-export default function PagesLayout({ children }: IPagesLayout) {
-  return (
-    <>
-      <Header />
-      <main className={styles.children}>
-        {children}
-      </main>
-      <Footer />
-    </>
-  )
+export default function PagesLayout({ children }: { children: ReactNode }) {
+  return <LayoutsPagesLayout>{ children }</LayoutsPagesLayout>
 };
