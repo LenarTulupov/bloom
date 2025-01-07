@@ -2,5 +2,5 @@ export interface IStep {
   id: number;
   title: string;
   description: string;
-  parentWidth: number | null;
+  parentWidth?: number | null;
 }
