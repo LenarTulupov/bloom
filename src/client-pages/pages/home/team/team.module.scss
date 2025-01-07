@@ -7,11 +7,17 @@
     position: absolute;
     top: -90px;
     left: 0;
+    z-index: 1;
   }
   &__img-right {
     position: absolute;
     top: -120px;
     right: -350px;
+    z-index: 1;
+  }
+  &__container {
+    position: relative;
+    z-index: 2;
   }
   &__title {
     margin-bottom: 56px;

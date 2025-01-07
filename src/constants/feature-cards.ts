@@ -1,4 +1,4 @@
-import { IFeatureCard } from "@/components/feature-card/feature-card";
+import { IFeatureCard } from "@/types/feature-card.interface";
 
 export const featureCards: IFeatureCard[] = [
   { 

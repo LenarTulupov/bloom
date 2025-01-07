@@ -2,8 +2,8 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import styles from './navigation.module.scss';
 import { navItems } from '@/constants/nav-items';
+import styles from './navigation.module.scss';
 
 export default function Navigation() {
   const pathname = usePathname();

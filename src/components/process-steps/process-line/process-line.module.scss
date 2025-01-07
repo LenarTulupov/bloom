@@ -1,0 +1,10 @@
+.process-line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: 4px;
+  background-color: var(--accent-color);
+  opacity: 0.2;
+}

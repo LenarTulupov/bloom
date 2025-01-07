@@ -1,4 +1,4 @@
-export default function Registration() {
+export default function UserSignUp() {
   return (
     <div>
         Registration

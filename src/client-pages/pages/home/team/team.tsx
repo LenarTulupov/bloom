@@ -25,7 +25,7 @@ export default function Team() {
           height={1062}
         />
       </div>
-      <Container>
+      <Container className={styles['section-team__container']}>
         <Title className={styles["section-team__title"]} color="white">
           Meet Out Team
         </Title>

@@ -1,0 +1,41 @@
+.process-step {
+  width: 45%;
+  &__subheader {
+    border-radius: 4px;
+    font-size: 18px;
+    margin-bottom: 24px;
+    &_odd {
+      justify-self: end;
+    }
+  }
+  &__title {
+    position: relative;
+    margin-bottom: 13px;
+    &_even {
+        &::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          right: calc((var(--parent-width) / 2) - 14px);
+          transform: translate(-50%, -50%);
+          width: 14px;
+          height: 14px;
+          background-color: var(--accent-color);
+          border-radius: 100%;
+        }
+    }
+    &_odd {
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: calc(var(--parent-width) / 2);
+        transform: translate(-50%, -50%);
+        width: 14px;
+        height: 14px;
+        background-color: var(--accent-color);
+        border-radius: 100%;
+      }
+    }
+  }
+}

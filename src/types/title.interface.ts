@@ -8,4 +8,6 @@ export interface ITitle extends HTMLAttributes<HTMLHeadingElement> {
   size?: 'xl' | 'lg' | 'md' | 'sm' | 'xs';
   background?: boolean;
   h?: 1 | 2 | 3 | 4 | 5 | 6;
+  rounded?: boolean;
+  border?: boolean;
 }

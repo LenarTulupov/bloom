@@ -10,6 +10,8 @@ export default function WelcomeContent() {
         size="xs"
         title="Turning Parenthood Dreams into Reality"
         background
+        rounded
+        border
       />
       <Title size="lg" color="black" h={1}>
         Welcome to&nbsp;

@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import cn from 'classnames'
 import styles from './container.module.scss';
 
 interface IContainer {
@@ -8,7 +9,7 @@ interface IContainer {
 
 export default function Container({ children, className }: IContainer) {
   return (
-    <div className={`${styles.container} ${className || ''}`}>
+    <div className={cn(styles.container, className || '')}>
       {children}
     </div>
   )
