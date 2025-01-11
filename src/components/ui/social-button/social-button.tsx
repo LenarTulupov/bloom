@@ -1,22 +1,27 @@
-import Image from "next/image";
 import Link from "next/link";
-import styles from './social-button.module.scss';
+import Icon from "../icon/icon";
+import cn from 'classnames'
+import { ISocialButton } from "@/types/social-button.interface";
+import styles from "./social-button.module.scss";
 
-interface ISocialButton {
-  href: string;
-  alt: string;
-  src: string;
-}
-
-export default function SocialButton({ href, alt, src }: ISocialButton) {
+export default function SocialButton({ 
+  size = 'sm', 
+  href, 
+  icon, 
+  rounded, 
+  color = 'accent'
+}: ISocialButton) {
   return (
-    <Link href={href} className={styles['social-button']}>
-      <Image
-        alt={alt}
-        src={src}
-        width={18}
-        height={18}
-      />
+    <Link 
+      href={href} 
+      className={cn(
+        styles["social-button"], 
+        rounded ? styles.rounded : '',
+        styles[size],
+        styles[color]
+      )}
+    >
+      <Icon icon={icon} color={color}/>
     </Link>
-  )
-};
+  );
+}

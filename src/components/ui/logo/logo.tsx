@@ -1,17 +1,11 @@
-import Image from "next/image";
-import styles from './logo.module.scss';
+import styles from "./logo.module.scss";
 
-export default function Logo() {
-  const logo = '/logo.png';
-  return (
-    <div className={styles.logo}>
-      <Image
-        alt="logo"
-        src={logo}
-        width={151}
-        height={87}
-        priority
-      />
-    </div>
-  )
-};
+interface ILogo {
+  width?: string;
+  height?: string;
+}
+
+export default function Logo({ width = '151', height = '87' }: ILogo) {
+  const logo = "/logo.png";
+  return <img className={styles.logo} alt="logo" src={logo} width={width} height={height} />;
+}

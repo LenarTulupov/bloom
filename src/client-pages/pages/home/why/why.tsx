@@ -17,6 +17,7 @@ export default function Why() {
             src="/home/why/kid-image.png"
             width={228}
             height={228}
+            priority
           />
           <Title
             title="Why Choose NewBloom?"

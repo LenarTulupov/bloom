@@ -9,8 +9,7 @@ export default function FooterSocials() {
         <SocialButton
           key={button.id}
           href={button.name}
-          alt={button.name}
-          src={button.icon}
+          icon={button.icon}
         />
       ))}
     </div>

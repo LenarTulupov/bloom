@@ -2,15 +2,30 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: var(--border-radius-small);
+
+}
+.rounded {
+  border-radius: 100%;
+}
+.sm {
+  width: 36px;
+  height: 36px;
+}
+.md {
   width: 46px;
   height: 46px;
+}
+
+.accent {
   background-color: var(--white-color);
-  border-radius: var(--border-radius-small);
   &:hover {
     background-color: var(--accent-color);
-    img {
-      transition: filter .3s ease-in-out;
-      filter: brightness(0) invert(1);
-    }
+  }
+}
+.white {
+  background-color: var(--accent-color);
+  &:hover {
+    background-color: var(--white-color);
   }
 }

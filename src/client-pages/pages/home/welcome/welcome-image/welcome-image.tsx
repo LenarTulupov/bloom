@@ -10,6 +10,7 @@ export default function WelcomeImage() {
         src="/home/welcome/background.png"
         width={1007}
         height={649}
+        priority
       />
     </div>
   );

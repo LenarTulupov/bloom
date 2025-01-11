@@ -15,7 +15,7 @@ export default function About() {
         />
       </div>
       <div className={styles["about__img-love"]}>
-        <Image alt="love" src="/home/about/love.png" width={361} height={463} />
+        <Image alt="love" src="/home/about/love.png" width={361} height={463} priority/>
       </div>
       <Container>
         <div className={styles.about__row}>

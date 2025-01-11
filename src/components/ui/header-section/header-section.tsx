@@ -24,7 +24,7 @@ export default function HeaderSection() {
             className={styles["header-section__breadcrumbs"]}
             formattedPathname={formattedPathname}
           />
-          <Title title={formattedPathname} size="xl" />
+          <Title title={formattedPathname} size="xl" color="white"/>
         </div>
       </Container>
     </section>

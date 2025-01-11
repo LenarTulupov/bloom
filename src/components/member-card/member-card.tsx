@@ -2,7 +2,7 @@ import Image from "next/image";
 import Title from "../ui/title/title";
 import Description from "../ui/description/description";
 import { IMemberCard } from "@/types/member-card.interface";
-import MemberLink from "./member-link/member-link";
+import MemberSocials from "./member-socials/member-socials";
 import styles from "./member-card.module.scss";
 
 export default function MemberCard({
@@ -26,15 +26,7 @@ export default function MemberCard({
           {name}
         </Title>
         <Description text={description} />
-        <div className={styles["member-card__content-socials"]}>
-          {socials.map((item) => (
-            <MemberLink
-              key={item.id}
-              name={item.name}
-              url={item.url}
-            />
-          ))}
-        </div>
+        <MemberSocials socials={socials}/>
       </div>
     </article>
   );

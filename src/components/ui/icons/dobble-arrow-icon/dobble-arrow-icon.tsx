@@ -1,16 +1,15 @@
-import Image from "next/image";
-import styles from './arrow-icon.module.scss';
+import styles from './dobble-arrow-icon.module.scss';
 
-interface IArrowIcon {
+interface IDobbleArrowIcon {
   className?: string;
   color: 'white' | 'black';
   width?: number;
   height?: number;
 }
 
-export default function ArrowIcon({ className, color, width = 20, height = 20}: IArrowIcon) {
+export default function DobbleArrowIcon({ className, color, width = 20, height = 20}: IDobbleArrowIcon) {
   return (
-    <Image
+    <img
       className={`${styles[color]} ${className || ''}`}
       alt="dobble arrow"
       src="/icons/DobbleArrow.svg"
