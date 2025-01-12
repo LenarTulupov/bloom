@@ -4,4 +4,5 @@ export interface IIcon {
   icon: ComponentType<SVGProps<SVGSVGElement>>;
   color?: "accent" | "white";
   size?: "sm" | "md";
+  className?: string;
 }

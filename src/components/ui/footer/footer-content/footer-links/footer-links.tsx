@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Title from "@/components/ui/title/title";
 import { usefulLinks } from "@/constants/useful-links";
-import ArrowIcon from "@/components/ui/icons/dobble-arrow-icon/dobble-arrow-icon";
+import Icon from "@/components/ui/icon/icon";
+import DobbleArrowIcon from '@icons/DobbleArrow.svg'
 import styles from "./footer-links.module.scss";
 
 export default function FooterLinks() {
@@ -12,7 +13,7 @@ export default function FooterLinks() {
         {usefulLinks.map((item) => (
           <li key={item.id} className={styles["footer__links-item"]}>
             <Link href={item.href} className={styles["footer__links-link"]}>
-              <ArrowIcon color="white" />
+              <Icon icon={DobbleArrowIcon}/>
               {item.name}
             </Link>
           </li>

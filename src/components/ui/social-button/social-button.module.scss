@@ -3,11 +3,12 @@
   align-items: center;
   justify-content: center;
   border-radius: var(--border-radius-small);
-
 }
+
 .rounded {
   border-radius: 100%;
 }
+
 .sm {
   width: 36px;
   height: 36px;
@@ -18,14 +19,14 @@
 }
 
 .accent {
-  background-color: var(--white-color);
-  &:hover {
-    background-color: var(--accent-color);
-  }
-}
-.white {
   background-color: var(--accent-color);
   &:hover {
     background-color: var(--white-color);
+  }
+}
+.white {
+  background-color: var(--white-color);
+  &:hover {
+    background-color: var(--aceent-color);
   }
 }

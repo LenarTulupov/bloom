@@ -10,6 +10,8 @@ export default function FooterSocials() {
           key={button.id}
           href={button.name}
           icon={button.icon}
+          color="accent"
+          size="md"
         />
       ))}
     </div>

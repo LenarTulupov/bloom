@@ -2,19 +2,20 @@ import { ReactNode } from 'react';
 import cn from 'classnames';
 import styles from './description.module.scss';
 
-interface IDescription {
-  children?: ReactNode;
+type IDescription = {
   color?: 'white' | 'black';
   className?: string;
-  size?: 'sm' | 'md';
-  text?: string;
-}
+  size?: 'sm' | 'md' | 'lg';
+} & (
+  | { text: string; children?: never } // Либо text обязателен
+  | { children: ReactNode; text?: never } // Либо children обязателен
+);
 
 export default function Description({ 
   children, 
   color = 'black', 
   className, 
-  size = 'sm',
+  size = 'md',
   text }: IDescription) {
   return (
     <p className={cn(

@@ -1,4 +1,5 @@
-import Image from "next/image";
+import Icon from "../icon/icon";
+import DateIcon from '@icons/date.svg'
 import styles from './date.module.scss';
 
 interface IDate {
@@ -8,12 +9,7 @@ interface IDate {
 export default function Date({ date }: IDate) {
   return (
     <div className={styles.date}>
-      <Image
-        alt="date"
-        src={'/icons/date.svg'}
-        width={20}
-        height={20}
-      />
+      <Icon icon={DateIcon}/>
       <div className={styles.date__text}>{date}</div>
     </div>
   )
