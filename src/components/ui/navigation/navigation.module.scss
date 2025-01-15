@@ -1,15 +1,2 @@
 .navigation {
-  &__list {
-    display: flex;
-    font-weight: 700;
-  }
-  &__link {
-    padding: 27px 23px;
-    &_active {
-      color: var(--primary-color);
-    }
-    &:hover {
-      color: var(--primary-color);
-    }
-  }
 }

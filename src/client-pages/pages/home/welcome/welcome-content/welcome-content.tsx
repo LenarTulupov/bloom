@@ -1,7 +1,7 @@
 import Button from "@/components/ui/button/button";
 import Title from "@/components/ui/title/title";
-import styles from "./welcome-content.module.scss";
 import Description from "@/components/ui/description/description";
+import styles from "./welcome-content.module.scss";
 
 export default function WelcomeContent() {
   return (

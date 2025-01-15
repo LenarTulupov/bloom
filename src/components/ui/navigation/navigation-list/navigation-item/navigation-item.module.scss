@@ -1,0 +1,9 @@
+.navigation__link {
+  padding: 27px 23px;
+  &_active {
+    color: var(--primary-color);
+  }
+  &:hover {
+    color: var(--primary-color);
+  }
+}
