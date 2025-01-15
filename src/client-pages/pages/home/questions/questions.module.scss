@@ -1,0 +1,18 @@
+.questions-section {
+  padding: 110px 0 152px;
+  &__content {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 49px;
+    &-header {
+      display: flex;
+      flex-direction: column;
+      row-gap: 82px;
+    }
+    &-list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 32px;
+    }
+  }
+}

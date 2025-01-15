@@ -6,11 +6,11 @@ export default function MemberSocials({ socials }: IMemberSocials) {
   return (
     <div className={styles["member-socials"]}>
       {socials.map((item) => (
-        <SocialButton 
-          key={item.id} 
-          href={item.url} 
-          icon={item.icon} 
-          color='accent'
+        <SocialButton
+          key={item.id}
+          href={item.url}
+          name={item.name}
+          color="primary"
           rounded
         />
       ))}

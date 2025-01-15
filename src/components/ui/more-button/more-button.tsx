@@ -1,6 +1,9 @@
-import ArrowIcon from "@icons/arrow.svg";
+'use client'
+
 import Icon from "../icon/icon";
 import Link from "next/link";
+import useHover from "@/hooks/useHover";
+import { ICONS } from "@/constants/icons";
 import styles from "./more-button.module.scss";
 
 interface IMoreButton {
@@ -8,11 +11,20 @@ interface IMoreButton {
   href?: string;
 }
 
-export default function MoreButton({ href = '#!', text = "Read More" }: IMoreButton) {
+export default function MoreButton({
+  href = "#!",
+  text = "Read More",
+}: IMoreButton) {
+  const { hover, onMouseEnter, onMouseLeave } = useHover();
   return (
-    <Link href={href} className={styles["more-button"]}>
+    <Link
+      className={styles["more-button"]}
+      href={href}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+    >
       {text}
-      <Icon icon={ArrowIcon} />
+      <Icon icon={ICONS.arrow} isHovered={hover} size="sm"/>
     </Link>
   );
 }

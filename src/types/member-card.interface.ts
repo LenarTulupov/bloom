@@ -1,5 +1,3 @@
-import { ComponentType, SVGProps } from "react";
-
 export interface IMemberCard {
   name: string;
   description: string;
@@ -8,6 +6,6 @@ export interface IMemberCard {
   socials: {
     id: number;
     url: string;
-    icon: ComponentType<SVGProps<SVGSVGElement>>
+    name: string;
   }[];
 }

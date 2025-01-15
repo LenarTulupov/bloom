@@ -1,3 +1,6 @@
 .blog-card {
   border-radius: 12px;
+  &:hover {
+    box-shadow: var(--box-shadow);
+  }
 }

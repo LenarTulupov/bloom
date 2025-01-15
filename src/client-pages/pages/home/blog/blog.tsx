@@ -9,8 +9,8 @@ export default function Blog() {
   return (
     <section className={styles["blog-section"]}>
       <Container>
-        <Title>Learn from our blog</Title>
-        <Description>
+        <Title className={styles['blog-section__title']}>Learn from our blog</Title>
+        <Description className={styles['blog-section__descr']}>
           We understand that building a family is one of life’s most precious
           journeys.
         </Description>

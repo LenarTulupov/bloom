@@ -1,4 +1,6 @@
 .footer-address__item {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
   column-gap: 8px;
 }

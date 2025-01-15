@@ -1,11 +1,16 @@
 .welcome-section__content {
+  padding: 106px 0 119px;
   display: flex;
   flex-direction: column;
   row-gap: 24px;
-  padding: 106px 0 119px;
   width: 656px;
+  @media (max-width: 1401px) {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
   &-color {
-    color: var(--accent-color);
+    color: var(--primary-color);
   }
   &-description {
     width: 459px;

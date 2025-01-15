@@ -3,7 +3,7 @@
   top: 0;
   right: -156px;
   height: 100%;
-  &__img {
-   
+  @media(max-width: 1400px) {
+    display: none;
   }
 }

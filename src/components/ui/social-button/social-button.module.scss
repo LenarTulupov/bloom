@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: center;
   border-radius: var(--border-radius-small);
+  box-shadow: var(--box-shadow);
 }
 
 .rounded {
@@ -18,8 +19,8 @@
   height: 46px;
 }
 
-.accent {
-  background-color: var(--accent-color);
+.primary {
+  background-color: var(--primary-color);
   &:hover {
     background-color: var(--white-color);
   }
@@ -27,6 +28,6 @@
 .white {
   background-color: var(--white-color);
   &:hover {
-    background-color: var(--aceent-color);
+    background-color: var(--primary-color);
   }
 }

@@ -12,15 +12,19 @@ export default function WelcomeContent() {
         background
         rounded
         border
+        color="primary"
       />
       <Title size="lg" color="black" h={1}>
         Welcome to&nbsp;
         <span className={styles["welcome-section__content-color"]}>
           NewBloom Surrogacy
-        </span>&nbsp;
-        Agency
+        </span>
+        &nbsp; Agency
       </Title>
-      <Description size="md" className={styles["welcome-section__content-description"]}>
+      <Description
+        size="md"
+        className={styles["welcome-section__content-description"]}
+      >
         trusted surrogacy services in Georgia with transparency, speed, and
         care.
       </Description>

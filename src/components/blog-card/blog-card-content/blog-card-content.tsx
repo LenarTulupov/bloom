@@ -22,7 +22,7 @@ export default function BlogCardContent({
       <Description className={styles["blog-card__content-descr"]} size="sm">
         {description}
       </Description>
-      <Divider />
+      <Divider color="gray"/>
       <MoreButton href={href} />
     </div>
   );

@@ -1,3 +1,3 @@
 export const oppositeColor = (color: string) => {
-  return color === "accent" ? "white" : "accent";
+  return color === "primary" ? "white" : "primary";
 };

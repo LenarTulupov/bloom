@@ -6,6 +6,14 @@
   color: var(--white-color)
 }
 
+.primary {
+  color: var(--primary-color);
+}
+
+.black {
+  color: var(--black-color);
+}
+
 .xl {
   font-size: 72px;
 }
@@ -34,7 +42,7 @@
 }
 
 .background {
-  color: var(--accent-color);
+  color: var(--primary-color);
   background-color: rgba(127, 57, 177, .2);
   padding: 8px 20px;
   width: fit-content;

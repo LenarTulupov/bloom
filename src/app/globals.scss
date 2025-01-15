@@ -13,13 +13,18 @@
   --border-radius-middle: 8px;
   --border-radius-small: 4px;
 
+  --primary-color: #7f39b1;
   --white-color: #fff;
   --black-color: #211c1d;
-  --accent-color: #7f39b1;
+  --accent-color: #FFC100;
   --gray-color: #F6F6F6;
 
+  --box-shadow: 0 8px 16px 0 rgba(0,0,0,0.1);
+
   // Hovers
-  --accent-hover: #9126de;
+  --primary-hover: #9126de;
+  --white-hover: #e3e3e3;
+  --accent-hover: #ffcd39;
 
   --font-main: "Catamaran", serif;
   --font-second: "Source Sans 3", serif;

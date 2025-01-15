@@ -6,7 +6,7 @@ import styles from "./button.module.scss";
 export default function Button({
   children,
   href,
-  color = "purple",
+  color = "primary",
   type = "button",
   onClick,
   className,

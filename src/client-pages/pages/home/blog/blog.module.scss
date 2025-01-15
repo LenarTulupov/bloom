@@ -1,7 +1,17 @@
 .blog-section {
+  padding: 110px 0;
   &__blogs {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 24px;
+  }
+  &__title {
+    text-align: center;
+  }
+  &__descr {
+    margin: 0 auto;
+    text-align: center;
+    width: 436px;
+    margin-bottom: 56px;
   }
 }

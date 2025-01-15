@@ -1,5 +1,6 @@
 import { usePathname } from "next/navigation";
-import ArrowIcon from "../icons/dobble-arrow-icon/dobble-arrow-icon";
+import Icon from "../icon/icon";
+import { ICONS } from "@/constants/icons";
 import styles from "./breadcrumps.module.scss";
 
 interface IBreadcrumps {
@@ -16,7 +17,7 @@ export default function Breadcrumps({
   return (
     <div className={`${styles.breadcrumps} ${className || ""}`}>
       Home
-      <ArrowIcon color="white" width={16} height={16} />
+      <Icon icon={ICONS.arrow} color="white"/>
       {formattedPathname || pathname}
     </div>
   );

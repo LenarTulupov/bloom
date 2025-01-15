@@ -29,7 +29,7 @@ export default function FeatureCard({
         <ul className={styles["feature-card__content-list"]}>
           {items.map((item) => (
             <li key={item.id} className={styles["feature-card__content-item"]}>
-              {item.title}
+              <span>{item.title}</span>
             </li>
           ))}
         </ul>

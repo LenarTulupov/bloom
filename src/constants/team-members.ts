@@ -1,7 +1,3 @@
-import FacebookIcon from '@icons/team/facebook.svg'
-import TwitterIcon from '@icons/team/twitter.svg'
-import LinkedInIcon from '@icons/team/linkedin.svg'
-
 export const teamMembers = [
   {
     id: 1,
@@ -13,20 +9,17 @@ export const teamMembers = [
       {
         id: 1,
         name: 'facebook',
-        url: 'https://www.facebook.com',
-        icon: FacebookIcon
+        url: '#!',
       },
       {
         id: 2,
         name: 'twitter',
-        url: 'https://www.facebook.com',
-        icon: TwitterIcon
+        url: '#!',
       },
       {
         id: 3,
         name: 'linkedin',
-        url: 'https://www.facebook.com',
-        icon: LinkedInIcon
+        url: '#!',
       },
     ]
   },
@@ -40,20 +33,17 @@ export const teamMembers = [
       {
         id: 1,
         name: 'facebook',
-        url: 'https://www.facebook.com',
-        icon: FacebookIcon
+        url: '#!',
       },
       {
         id: 2,
         name: 'twitter',
-        url: 'https://www.facebook.com',
-        icon: TwitterIcon
+        url: '#!',
       },
       {
         id: 3,
         name: 'linkedin',
-        url: 'https://www.facebook.com',
-        icon: LinkedInIcon
+        url: '#!',
       },
     ]
   }

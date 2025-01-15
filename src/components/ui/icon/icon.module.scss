@@ -1,3 +1,5 @@
+.icon {
+}
 .sm {
   width: 18px;
   height: 18px;
@@ -11,19 +13,12 @@
   height: 24px;
 }
 
-.accent {
-  path {
-    fill: var(--accent-color);
-    &:hover {
-      fill: var(--white-color);
-    }
-  }
+.primary {
+  color: var(--primary-color);
 }
 .white {
-  path {
-    fill: var(--white-color);
-  }
-  &:hover {
-    fill: var(--accent-color);
+    color: white;
+  &_hovered {
+    color: var(--primary-color);
   }
 }

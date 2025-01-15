@@ -1,6 +1,6 @@
 import Icon from "../icon/icon";
-import DateIcon from '@icons/date.svg'
 import styles from './date.module.scss';
+import { ICONS } from "@/constants/icons";
 
 interface IDate {
   date: string;
@@ -9,7 +9,7 @@ interface IDate {
 export default function Date({ date }: IDate) {
   return (
     <div className={styles.date}>
-      <Icon icon={DateIcon}/>
+      <Icon icon={ICONS.date}/>
       <div className={styles.date__text}>{date}</div>
     </div>
   )

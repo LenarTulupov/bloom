@@ -4,6 +4,9 @@ import "./globals.scss";
 export const metadata: Metadata = {
   title: "NewBloom",
   description: "Surrogacy Agency trusted surrogacy services in Georgia with transparency, speed, and care",
+  icons: {
+    icon: '/favicon.png'
+  }
 };
 
 export default function RootLayout({

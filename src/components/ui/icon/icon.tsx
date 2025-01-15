@@ -4,15 +4,16 @@ import styles from "./icon.module.scss";
 
 export default function Icon({
   icon: Icon,
-  color = "accent",
+  color = "primary",
   size = "md",
   className,
+  isHovered
 }: IIcon) {
   return (
     <Icon
       className={cn(
         styles["icon"],
-        styles[color],
+        !isHovered ? styles[color] : styles[`${color}_hovered`],
         styles[size],
         className || ""
       )}

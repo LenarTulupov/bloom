@@ -1,9 +1,7 @@
-import { ComponentType, SVGProps } from "react";
-
 export interface ISocialButton {
   href: string;
-  icon: ComponentType<SVGProps<SVGSVGElement>>;
+  name: string;
   size?: 'sm' | 'md';
-  color?: "accent" | "white";
+  color?: "primary" | "white";
   rounded?: boolean;
 }

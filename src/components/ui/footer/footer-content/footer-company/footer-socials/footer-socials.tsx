@@ -8,9 +8,9 @@ export default function FooterSocials() {
       {socialButtons.map((button) => (
         <SocialButton
           key={button.id}
-          href={button.name}
-          icon={button.icon}
-          color="accent"
+          href={button.href}
+          name={button.name}
+          color="primary"
           size="md"
         />
       ))}

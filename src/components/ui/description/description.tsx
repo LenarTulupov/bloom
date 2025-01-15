@@ -7,8 +7,8 @@ type IDescription = {
   className?: string;
   size?: 'sm' | 'md' | 'lg';
 } & (
-  | { text: string; children?: never } // Либо text обязателен
-  | { children: ReactNode; text?: never } // Либо children обязателен
+  | { text: string; children?: never } 
+  | { children?: ReactNode; text?: never } 
 );
 
 export default function Description({ 
