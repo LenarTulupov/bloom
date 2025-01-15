@@ -1,0 +1,17 @@
+.process-section__content {
+  padding: 110px 0 57px;
+  &-title {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  &-descr {
+    justify-self: center;
+    text-align: center;
+    width: 436px;
+    margin-bottom: 56px;
+  }
+  &-button {
+    display: flex;
+    justify-self: center;
+  }
+}

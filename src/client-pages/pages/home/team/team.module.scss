@@ -1,7 +1,6 @@
 .section-team {
   position: relative;
   // background-color: var(--accent-color);
-  padding: 110px 0 48px;
   overflow: hidden;
   &__img-left {
     position: absolute;
@@ -18,18 +17,5 @@
   &__container {
     position: relative;
     z-index: 2;
-  }
-  &__title {
-    margin-bottom: 56px;
-    text-align: center;
-  }
-  &__cards {
-    display: flex;
-    column-gap: 24px;
-    margin-bottom: 65px;
-  }
-  &__button {
-    display: flex;
-    margin: 0 auto;
   }
 }

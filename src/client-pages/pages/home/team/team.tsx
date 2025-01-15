@@ -1,11 +1,8 @@
 import Container from "@/components/ui/container/container";
-import Title from "@/components/ui/title/title";
-import MemberCard from "@/components/member-card/member-card";
-import Button from "@/components/ui/button/button";
-import { teamMembers } from "@/constants/team-members";
 import Image from "next/image";
-import styles from "./team.module.scss";
 import BackgroundColor from "@/components/ui/background-color/background-color";
+import TeamContent from "./team-content/team-content";
+import styles from "./team.module.scss";
 
 export default function Team() {
   return (
@@ -28,24 +25,7 @@ export default function Team() {
           />
         </div>
         <Container className={styles["section-team__container"]}>
-          <Title className={styles["section-team__title"]} color="white">
-            Meet Out Team
-          </Title>
-          <div className={styles["section-team__cards"]}>
-            {teamMembers.map((member) => (
-              <MemberCard
-                key={member.id}
-                name={member.name}
-                description={member.description}
-                image={member.image}
-                role={member.role}
-                socials={member.socials}
-              />
-            ))}
-          </div>
-          <Button className={styles["section-team__button"]} color="white">
-            Learn More
-          </Button>
+          <TeamContent/>
         </Container>
       </BackgroundColor>
     </section>
