@@ -2,7 +2,7 @@
 
 import Icon from "../icon/icon";
 import Link from "next/link";
-import useHover from "@/hooks/useHover";
+import useHover from "@/hooks/use-hover";
 import { ICONS } from "@/constants/icons";
 import styles from "./more-button.module.scss";
 

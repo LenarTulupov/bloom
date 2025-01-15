@@ -3,7 +3,7 @@ import Title from "@/components/ui/title/title";
 import { usefulLinks } from "@/constants/useful-links";
 import Icon from "@/components/ui/icon/icon";
 import { MdOutlineKeyboardDoubleArrowRight as DoubleArrow } from "react-icons/md";
-import { useHoverId } from "@/hooks/useHoverId";
+import { useHoverId } from "@/hooks/use-hoverId";
 import styles from "./footer-links.module.scss";
 
 export default function FooterLinks() {

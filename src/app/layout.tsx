@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import "./globals.scss";
+import Providers from "@/utils/providers";
 
 export const metadata: Metadata = {
   title: "NewBloom",
-  description: "Surrogacy Agency trusted surrogacy services in Georgia with transparency, speed, and care",
+  description:
+    "Surrogacy Agency trusted surrogacy services in Georgia with transparency, speed, and care",
   icons: {
-    icon: '/favicon.png'
-  }
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
@@ -17,7 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {children}
+        <Providers>
+          {children}
+        </Providers>
       </body>
     </html>
   );
