@@ -1,0 +1,9 @@
+.admin-sign-in {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}

@@ -22,3 +22,9 @@
     color: var(--primary-color);
   }
 }
+.gray {
+  color: var(--dark-gray-color);
+  &:hover {
+    color: var(--black-color);
+  }
+}

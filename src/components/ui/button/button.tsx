@@ -9,6 +9,7 @@ export default function Button({
   color = "primary",
   type = "button",
   onClick,
+  disabled,
   className,
 }: IButton) {
   const buttonClassName = cn(styles.button, className || "", styles[color]);
@@ -21,7 +22,12 @@ export default function Button({
     );
   }
   return (
-    <button type={type} className={buttonClassName} onClick={onClick}>
+    <button 
+      className={buttonClassName} 
+      type={type} 
+      onClick={onClick}
+      disabled={disabled}
+    >
       {children}
     </button>
   );

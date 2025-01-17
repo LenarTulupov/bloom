@@ -1,0 +1,36 @@
+.admin-sign-in__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  &-email {
+    display: flex;
+    flex-direction: column;
+  }
+  &-password {
+    display: flex;
+    flex-direction: column;
+  }
+  .form-password {
+    @extend .admin-sign-in__form-password;
+    &__field {
+      display: flex;
+      align-items: center;
+      border: 1px solid #000;
+      border-radius: 3px;
+      &-input {
+        border: none;
+        &:focus {
+          outline: none;
+        }
+      }
+      &-button {
+        margin: 0 15px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+      }
+      &-icon {
+      }
+    }
+  }
+}

@@ -1,3 +1,4 @@
 export const API_ENDPOINTS = {
-  PRODUCTS: '/products'
+  PRODUCTS: '/products',
+  ADMIN_LOGIN: '/admin/login'
 }

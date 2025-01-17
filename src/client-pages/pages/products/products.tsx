@@ -13,7 +13,7 @@ export default function Products() {
       <Container>
         <ProductsGrid>
           {products.map((product) => (
-            <ProductCard key={product.id} productData={product} />
+            <ProductCard key={product.id} data={product} />
           ))}
         </ProductsGrid>
       </Container>

@@ -7,4 +7,5 @@ export interface IButton {
   className?: string;
   type?: "button" | "submit";
   onClick?: () => void;
+  disabled?: boolean;
 }

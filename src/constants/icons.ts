@@ -12,6 +12,8 @@ import { IoIosAddCircleOutline as AddIcon } from "react-icons/io";
 import { IoIosRemoveCircleOutline as RemoveIcon} from "react-icons/io";
 import { AiOutlineYoutube as YoutubeIcon} from "react-icons/ai";
 import { FaInstagram as InstagramIcon} from "react-icons/fa";
+import { BiShow  as ShowIcon} from "react-icons/bi";
+import { BiHide as HideIcon} from "react-icons/bi";
 
 
 export const ICONS: Record<string, FC<SVGProps<SVGSVGElement>>> = {
@@ -27,6 +29,8 @@ export const ICONS: Record<string, FC<SVGProps<SVGSVGElement>>> = {
   comments: CommentsIcon,
   arrow: ArrowIcon,
   add: AddIcon,
-  remove: RemoveIcon
+  remove: RemoveIcon,
+  show: ShowIcon,
+  hide: HideIcon
   
 }

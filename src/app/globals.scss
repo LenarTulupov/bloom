@@ -4,20 +4,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
 
 :root {
-  --background: #ffffff;
-
+  
   --header-height: 130px;
   --footer-height: 675px;
   --container-width: 1350px;
   --border-radius-big: 12px;
   --border-radius-middle: 8px;
   --border-radius-small: 4px;
+  
+  // Colors
+  --background: #ffffff;
 
   --primary-color: #7f39b1;
   --white-color: #fff;
   --black-color: #211c1d;
   --accent-color: #FFC100;
   --gray-color: #F6F6F6;
+  --dark-gray-color: #9397ad;
 
   --box-shadow: 0 8px 16px 0 rgba(0,0,0,0.1);
 
@@ -26,10 +29,19 @@
   --white-hover: #e3e3e3;
   --accent-hover: #ffcd39;
 
+  // Fonts
   --font-main: "Catamaran", serif;
   --font-second: "Source Sans 3", serif;
   --font-third: "Nunito", serif;
   --font-forth: "Inter", serif;
+
+  // Breakpoints
+  --breakpoint-xs: 320px;
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 576px;
+  --breakpoint-lg: 768px;
+  --breakpoint-xl: 992px;
+  --breakpoint-xxl: 1200px;
 }
 
 html,

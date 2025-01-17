@@ -3,11 +3,11 @@ import { IProduct } from "@/types/product.interface";
 import styles from "./product-card.module.scss";
 
 interface IProductCard {
-  productData: IProduct;
+  data: IProduct;
 }
 
-export default function ProductCard({ productData }: IProductCard) {
-  const { title, thumbnail } = productData;
+export default function ProductCard({ data }: IProductCard) {
+  const { title, thumbnail } = data;
   return (
     <article className={styles["product-card"]}>
         <img
