@@ -13,8 +13,14 @@ export default function WelcomeContent() {
         rounded
         border
         color="primary"
+        className={styles['welcome-section__content-title-background']}
       />
-      <Title size="lg" color="black" h={1}>
+      <Title 
+        size="lg" 
+        color="black" 
+        h={1} 
+        className={styles['welcome-section__content-title']}
+      >
         Welcome to&nbsp;
         <span className={styles["welcome-section__content-color"]}>
           NewBloom Surrogacy

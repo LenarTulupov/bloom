@@ -36,12 +36,12 @@
   --font-forth: "Inter", serif;
 
   // Breakpoints
-  --breakpoint-xs: 320px;
-  --breakpoint-sm: 480px;
-  --breakpoint-md: 576px;
-  --breakpoint-lg: 768px;
-  --breakpoint-xl: 992px;
-  --breakpoint-xxl: 1200px;
+  $breakpoint-xs: 320px;
+  $breakpoint-sm: 480px;
+  $breakpoint-md: 576px;
+  $breakpoint-lg: 768px;
+  $breakpoint-xl: 992px;
+  $breakpoint-xxl: 1200px;
 }
 
 html,
