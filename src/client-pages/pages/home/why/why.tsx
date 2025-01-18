@@ -29,14 +29,7 @@ export default function Why() {
           </Description>
           <div className={styles["why-section__content-cards"]}>
             {featureCards.map((card) => (
-              <FeatureCard
-                key={card.id}
-                id={card.id}
-                title={card.title}
-                description={card.description}
-                text={card.text}
-                items={card.items}
-              />
+              <FeatureCard key={card.id} data={card} />
             ))}
           </div>
         </div>

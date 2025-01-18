@@ -9,9 +9,10 @@ interface INavigationItem {
     name: string;
   };
   pathname: string;
+  className?: string;
 }
 
-export default function NavigationItem({ item, pathname }: INavigationItem) {
+export default function NavigationItem({ item, pathname, className }: INavigationItem) {
   const { href, name } = item;
 
   return (
@@ -20,7 +21,8 @@ export default function NavigationItem({ item, pathname }: INavigationItem) {
         href={href.toLowerCase()}
         className={cn(
           styles.navigation__link, 
-          pathname === href ? styles.navigation__link_active : ""
+          pathname === href ? styles.navigation__link_active : "",
+          className || ''
         )}
       >
         {name.slice(0, 1).toUpperCase() + name.slice(1)}

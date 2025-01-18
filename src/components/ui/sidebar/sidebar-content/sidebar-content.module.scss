@@ -1,0 +1,15 @@
+.sidebar-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  visibility: hidden;
+  height: 100%;
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  &_opened {
+    visibility: visible;
+    background-color: var(--white-color);
+  }
+}

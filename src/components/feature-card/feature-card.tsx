@@ -3,12 +3,8 @@ import Description from "../ui/description/description";
 import { IFeatureCard } from "@/types/feature-card.interface";
 import styles from "./feature-card.module.scss";
 
-export default function FeatureCard({
-  title,
-  description,
-  text,
-  items,
-}: IFeatureCard) {
+export default function FeatureCard({ data }: { data: IFeatureCard}) {
+  const { title, description, text, items } = data;
   return (
     <article className={styles["feature-card"]}>
       <Title

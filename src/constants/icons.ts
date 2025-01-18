@@ -14,6 +14,7 @@ import { AiOutlineYoutube as YoutubeIcon} from "react-icons/ai";
 import { FaInstagram as InstagramIcon} from "react-icons/fa";
 import { BiShow  as ShowIcon} from "react-icons/bi";
 import { BiHide as HideIcon} from "react-icons/bi";
+import { IoClose as CloseIcon} from "react-icons/io5";
 
 
 export const ICONS: Record<string, FC<SVGProps<SVGSVGElement>>> = {
@@ -31,6 +32,7 @@ export const ICONS: Record<string, FC<SVGProps<SVGSVGElement>>> = {
   add: AddIcon,
   remove: RemoveIcon,
   show: ShowIcon,
-  hide: HideIcon
+  hide: HideIcon,
+  close: CloseIcon
   
 }
