@@ -17,8 +17,8 @@ export default function SignInForm() {
   const [showPassword, setShowPassword] = useState<boolean>(false);
 
   const toggleShowPassword = () => {
-    setShowPassword(p => !p);
-  }
+    setShowPassword((p) => !p);
+  };
 
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
@@ -46,7 +46,7 @@ export default function SignInForm() {
 
       window.location.href = "/dashboard/admin";
     } catch (error: unknown) {
-      if(error instanceof Error) {
+      if (error instanceof Error) {
         setError("Failed to log in" + error.message);
       } else {
         setError("An unknown error occurred");
@@ -83,12 +83,12 @@ export default function SignInForm() {
             onChange={(e) => setPassword(e.target.value)}
             required
           />
-          <button 
+          <button
             className={styles["form-password__field-button"]}
             onClick={toggleShowPassword}
             type="button"
           >
-            <Icon icon={showPassword ? ICONS.hide : ICONS.show} color="gray"/>
+            <Icon icon={showPassword ? ICONS.hide : ICONS.show} color="gray" />
           </button>
         </div>
       </div>

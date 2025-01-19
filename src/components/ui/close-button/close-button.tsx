@@ -1,16 +1,23 @@
 import { ICONS } from "@/constants/icons";
 import Icon from "../icon/icon";
+import cn from 'classnames'
 import styles from './close-button.module.scss';
 
 interface ICloseButton {
-  onClick: () => void;
+  onClose: () => void;
   className?: string;
 }
 
-export default function CloseButton({ onClick, className }: ICloseButton) {
+export default function CloseButton({ onClose, className }: ICloseButton) {
   return (
-    <button onClick={onClick} className={`${styles['close-button']} ${className || ''}`}>
-      <Icon icon={ICONS.close}/>
+    <button 
+      onClick={onClose} 
+      className={cn(
+        styles['close-button'],
+        className || ''
+      )}
+    >
+      <Icon icon={ICONS.close} color="black"/>
     </button>
   )
 }

@@ -12,4 +12,7 @@
     visibility: visible;
     background-color: var(--white-color);
   }
+  @media(max-width: 480px) {
+    width: 100%;
+  }
 }

@@ -1,8 +1,8 @@
 import { ReactNode, useEffect, useState } from "react";
-import styles from "./sidebar.module.scss";
 import { createPortal } from "react-dom";
 import Overlay from "../overlay/overlay";
 import SidebarContent from "./sidebar-content/sidebar-content";
+import styles from "./sidebar.module.scss";
 
 interface ISidebar {
   children: ReactNode;

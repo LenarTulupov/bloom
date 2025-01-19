@@ -1,7 +1,15 @@
 .close-button {
-  background-color: transparent;
-  align-self: start;
-  width: 24px;
-  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
   border-radius: 100%;
+  background-color: transparent;
+  border: none;
+  padding: 0 !important;
+  &:hover {
+    background-color: var(--gray-color);
+  }
 }

@@ -25,7 +25,7 @@ export default function SidebarContent({
       )}
     >
       {children}
-      <CloseButton onClick={handleHamburgerClick} />
+      <CloseButton onClose={handleHamburgerClick} />
     </div>
   );
 }
