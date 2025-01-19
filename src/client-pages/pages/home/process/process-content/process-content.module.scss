@@ -9,6 +9,9 @@
     text-align: center;
     width: 436px;
     margin-bottom: 56px;
+    @media(max-width: 576px) {
+      width: 100%;
+    }
   }
   &-button {
     display: flex;

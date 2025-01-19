@@ -19,10 +19,11 @@ export default function MemberCard({
         src={image}
         width={186}
         height={186}
+        className={styles['member-card__img']}
       />
       <div className={styles["member-card__content"]}>
-        <div className={styles["member-card__role"]}>{role}</div>
-        <Title h={4} size="sm">
+        <div className={styles["member-card__content-role"]}>{role}</div>
+        <Title h={4} size="sm" className={styles['member-card__content-title']}>
           {name}
         </Title>
         <Description text={description} />
