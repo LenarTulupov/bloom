@@ -15,6 +15,8 @@ import { FaInstagram as InstagramIcon} from "react-icons/fa";
 import { BiShow  as ShowIcon} from "react-icons/bi";
 import { BiHide as HideIcon} from "react-icons/bi";
 import { IoClose as CloseIcon} from "react-icons/io5";
+import { FaAngleDown as DownIcon} from "react-icons/fa6";
+import { FaAngleUp as UpIcon} from "react-icons/fa6";
 
 
 export const ICONS: Record<string, FC<SVGProps<SVGSVGElement>>> = {
@@ -33,6 +35,8 @@ export const ICONS: Record<string, FC<SVGProps<SVGSVGElement>>> = {
   remove: RemoveIcon,
   show: ShowIcon,
   hide: HideIcon,
-  close: CloseIcon
+  close: CloseIcon,
+  down: DownIcon,
+  up: UpIcon
   
 }

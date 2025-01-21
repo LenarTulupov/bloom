@@ -6,7 +6,8 @@
   height: 100%;
   width: 300px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  row-gap: 20px;
   padding: 20px;
   &_opened {
     visibility: visible;

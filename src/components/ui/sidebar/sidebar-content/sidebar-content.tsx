@@ -1,8 +1,7 @@
 import { ReactNode } from "react";
 import cn from "classnames";
+import SidebarHeader from "./sidebar-header/sidebar-header";
 import styles from "./sidebar-content.module.scss";
-import CloseButton from "../../close-button/close-button";
-import { useHamburger } from "@/hooks/use-hamburger";
 
 interface ISidebarContent {
   children: ReactNode;
@@ -15,7 +14,6 @@ export default function SidebarContent({
   className,
   isOpened,
 }: ISidebarContent) {
-  const { handleHamburgerClick } = useHamburger();
   return (
     <div
       className={cn(
@@ -24,8 +22,8 @@ export default function SidebarContent({
         isOpened ? styles["sidebar-content_opened"] : ""
       )}
     >
+      <SidebarHeader />
       {children}
-      <CloseButton onClose={handleHamburgerClick} />
     </div>
   );
 }

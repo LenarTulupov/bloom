@@ -10,13 +10,14 @@ interface INavigationItem {
   };
   pathname: string;
   className?: string;
+  elementClass?: string;
 }
 
-export default function NavigationItem({ item, pathname, className }: INavigationItem) {
+export default function NavigationItem({ item, pathname, className, elementClass }: INavigationItem) {
   const { href, name } = item;
 
   return (
-    <li className={styles.navigation__item}>
+    <li className={cn(styles.navigation__item, elementClass || '')}>
       <Link
         href={href.toLowerCase()}
         className={cn(

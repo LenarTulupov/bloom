@@ -17,7 +17,7 @@ export default function CloseButton({ onClose, className }: ICloseButton) {
         className || ''
       )}
     >
-      <Icon icon={ICONS.close} color="black"/>
+      <Icon icon={ICONS.close} color="black" size="xl"/>
     </button>
   )
 }

@@ -34,9 +34,7 @@ export default function Sidebar({ children, isOpened }: ISidebar) {
   return createPortal(
     <div className={styles.sidebar}>
       <Overlay isOpened={isOpened} />
-      <SidebarContent isOpened={animate}>
-        {children}
-      </SidebarContent>
+      <SidebarContent isOpened={animate}>{children}</SidebarContent>
     </div>,
     portalTarget
   );
