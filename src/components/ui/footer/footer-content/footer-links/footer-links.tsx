@@ -2,8 +2,8 @@ import Link from "next/link";
 import Title from "@/components/ui/title/title";
 import { usefulLinks } from "@/constants/useful-links";
 import Icon from "@/components/ui/icon/icon";
-import { MdOutlineKeyboardDoubleArrowRight as DoubleArrow } from "react-icons/md";
 import { useHoverId } from "@/hooks/use-hoverId";
+import { ICONS } from "@/constants/icons";
 import styles from "./footer-links.module.scss";
 
 export default function FooterLinks() {
@@ -20,7 +20,7 @@ export default function FooterLinks() {
             onMouseLeave={handleMouseLeave}
           >
             <Link href={item.href} className={styles["footer__links-link"]}>
-              <Icon icon={DoubleArrow} isHovered={hoverId === item.id} size="lg" />
+              <Icon icon={ICONS.doubleArrow} isHovered={hoverId === item.id} size="lg" />
               {item.name}
             </Link>
           </li>

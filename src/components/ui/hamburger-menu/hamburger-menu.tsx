@@ -1,41 +1,24 @@
-import { ICONS } from "@/constants/icons";
-import Icon from "../icon/icon";
-import NavigationItem from "../navigation/navigation-list/navigation-item/navigation-item";
-import NavigationList from "../navigation/navigation-list/navigation-list";
+import { IHamburgerMenu } from "@/types/hamburger-menu.interface";
 import styles from "./hamburger-menu.module.scss";
+import {
+  Navigation,
+  NavigationItem,
+  NavigationLink,
+  NavigationList,
+} from "../navigation";
 
-interface IHamburgerMenu {
-  items: {
-    id: number;
-    href: string;
-    name: string;
-    subItems?: {
-      id: number;
-      name: string;
-      href: string;
-    }[]
-  }[];
-  pathname: string;
-}
-
-export default function HamburgerMenu({ items, pathname }: IHamburgerMenu) {
+export default function HamburgerMenu({ items }: IHamburgerMenu) {
   return (
     <div className={styles.hamburger__menu}>
-      <NavigationList column>
-        {items.map((item) => (
-          <div className={styles['hamburger__menu-element']} key={item.id}>
-            <NavigationItem
-              item={item}
-              pathname={pathname}
-              className={styles["hamburger__menu-link"]}
-              elementClass={styles["hamburger__menu-item"]}
-              />
-              {item.subItems && (
-                <Icon icon={ICONS.down} />
-              )}
-          </div>
-        ))}
-      </NavigationList>
+      <Navigation>
+        <NavigationList column>
+          {items.map((item) => (
+            <NavigationItem key={item.id}>
+              <NavigationLink link={item} dropdown column/>
+            </NavigationItem>
+          ))}
+        </NavigationList>
+      </Navigation>
     </div>
   );
 }

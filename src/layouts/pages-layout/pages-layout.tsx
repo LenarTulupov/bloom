@@ -30,7 +30,7 @@ export default function LayoutsPagesLayout({ children }: IPagesLayout) {
       </>
       <>
         <Sidebar isOpened={isHamburgerOpened}>
-          <HamburgerMenu items={navItems} pathname={pathname}/>
+          <HamburgerMenu items={navItems}/>
         </Sidebar>
       </>
     </>

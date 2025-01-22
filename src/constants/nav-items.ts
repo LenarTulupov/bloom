@@ -21,9 +21,5 @@ export const navItems = [
   { id: 5, href: "/FAQs", name: "FAQs" },
   { id: 6, href: "favorites", name: "favorites" },
   { id: 7, href: "cart", name: "cart" },
-  { id: 8, href: "/user/sign-in", name: "Sign in", subItems: [
-    {id: 1, href: "#!", name: "testItem 1"},
-    {id: 2, href: "#!", name: "testItem 2"},
-    {id: 3, href: "#!", name: "testItem 3"},
-  ] },
+  { id: 8, href: "/user/sign-in", name: "Sign in" },
 ];

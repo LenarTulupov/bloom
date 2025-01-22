@@ -2,8 +2,8 @@ import Link from "next/link";
 import Button from "../../button/button";
 import Hamburger from "../../hamburger/hamburger";
 import Logo from "../../logo/logo";
-import Navigation from "../../navigation/navigation";
 import styles from './header-content.module.scss';
+import NavigationMenu from "@/components/navigation-menu/navigation-menu";
 
 export default function HeaderContent() {
   return (
@@ -12,7 +12,7 @@ export default function HeaderContent() {
         <Logo className={styles['header__content-logo']}/>
       </Link>
       <Hamburger />
-      <Navigation className={styles['header__content-navigation']}/>
+      <NavigationMenu className={styles['header__content-navigation']}/>
       <Button 
         className={styles['header__content-button']}
         href='/contact-us' 

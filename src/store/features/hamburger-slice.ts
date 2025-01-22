@@ -9,7 +9,7 @@ const initialState: IHamburgerSlice = {
 }
 
 const hamburgerSlice = createSlice({
-  name: 'hamburgerState',
+  name: "hamburgerState",
   initialState,
   reducers: {
     hamburgerState: (state) => {

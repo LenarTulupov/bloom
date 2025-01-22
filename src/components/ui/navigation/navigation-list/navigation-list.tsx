@@ -7,7 +7,7 @@ interface INavigationList {
   column?: boolean;
 }
 
-export default function NavigationList({ children, column = false }: INavigationList) {
+export function NavigationList({ children, column = false }: INavigationList) {
   return (
     <ul 
       className={cn(

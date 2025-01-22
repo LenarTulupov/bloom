@@ -1,26 +1,16 @@
-import { usePathname } from 'next/navigation';
-import { navItems } from '@/constants/nav-items';
-import NavigationList from './navigation-list/navigation-list';
-import NavigationItem from './navigation-list/navigation-item/navigation-item';
-import cn from 'classnames'
-import styles from './navigation.module.scss';
+import cn from "classnames";
+import { ReactNode } from "react";
+import styles from "./navigation.module.scss";
 
 interface INavigation {
+  children: ReactNode;
   className?: string;
 }
 
-export default function Navigation({ className }: INavigation) {
-  const pathname = usePathname();
+export function Navigation({ children, className }: INavigation) {
   return (
-    <nav className={cn(
-      styles.navigation,
-      className || ''
-    )}>
-      <NavigationList>
-        {navItems.map((item) => (
-          <NavigationItem key={item.id} item={item} pathname={pathname}/>
-        ))}
-      </NavigationList>
+    <nav className={cn(styles.navigation, className || "")}>
+      { children }
     </nav>
-  )
-};
+  );
+}

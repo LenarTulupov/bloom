@@ -17,7 +17,7 @@ export default function Breadcrumps({
   return (
     <div className={`${styles.breadcrumps} ${className || ""}`}>
       Home
-      <Icon icon={ICONS.arrow} color="white"/>
+      <Icon icon={ICONS.doubleArrow} color="white"/>
       {formattedPathname || pathname}
     </div>
   );

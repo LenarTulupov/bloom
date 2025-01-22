@@ -17,6 +17,7 @@ import { BiHide as HideIcon} from "react-icons/bi";
 import { IoClose as CloseIcon} from "react-icons/io5";
 import { FaAngleDown as DownIcon} from "react-icons/fa6";
 import { FaAngleUp as UpIcon} from "react-icons/fa6";
+import { MdKeyboardDoubleArrowRight as DoubleArrowIcon} from "react-icons/md";
 
 
 export const ICONS: Record<string, FC<SVGProps<SVGSVGElement>>> = {
@@ -37,6 +38,7 @@ export const ICONS: Record<string, FC<SVGProps<SVGSVGElement>>> = {
   hide: HideIcon,
   close: CloseIcon,
   down: DownIcon,
-  up: UpIcon
+  up: UpIcon,
+  doubleArrow: DoubleArrowIcon
   
 }
