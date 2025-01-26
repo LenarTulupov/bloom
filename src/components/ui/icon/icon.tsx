@@ -7,7 +7,8 @@ export default function Icon({
   color = "primary",
   size = "md",
   className,
-  isHovered
+  isHovered,
+  isHoverIcon
 }: IIcon) {
   return (
     <Icon
@@ -15,6 +16,7 @@ export default function Icon({
         styles["icon"],
         !isHovered ? styles[color] : styles[`${color}_hovered`],
         styles[size],
+        isHoverIcon ? styles["icon__hover-icon"] : '',
         className || ""
       )}
     />

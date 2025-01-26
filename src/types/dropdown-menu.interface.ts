@@ -6,5 +6,5 @@ export interface IDropdownMenu {
   }[];
   className?: string;
   isPortal?: boolean;
-  position: { top: number; left: number} | null;
+  position: { top: number; left: number; width: number; height: number;} | null;
 }

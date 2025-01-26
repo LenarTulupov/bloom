@@ -6,4 +6,5 @@ export interface IIcon {
   size?: "sm" | "md" | 'lg' | 'xl';
   className?: string;
   isHovered?: boolean;
+  isHoverIcon?: boolean;
 }

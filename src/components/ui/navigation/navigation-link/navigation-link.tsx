@@ -4,14 +4,21 @@ import { INavigationLink } from "@/types/navigation-link.interface";
 import NavigationLinkText from "../navigation-text/navigation-link-text";
 import DropdownMenu from "@/components/dropdown-menu/dropdown-menu";
 import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 import styles from "./navigation-link.module.scss";
 
 export function NavigationLink({ link, column }: INavigationLink) {
   const { href, name, subItems } = link;
   const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
-  const [dropdownPosition, setDropdownPosition] = useState<{ top: number; left: number} | null>(null);
+  const pathname = usePathname();
+  const [dropdownPosition, setDropdownPosition] = useState<{
+    top: number;
+    left: number;
+    width: number;
+    height: number;
+  } | null>(null);
   const linkRef = useRef<HTMLAnchorElement | null>(null);
-  
+
   const handleDropdownOpen = () => {
     if (column) {
       setIsDropdownOpen((p) => !p);
@@ -31,24 +38,32 @@ export function NavigationLink({ link, column }: INavigationLink) {
   };
 
   useEffect(() => {
-    if(isDropdownOpen && linkRef.current) {
+    if (isDropdownOpen && linkRef.current) {
       const rect = linkRef.current.getBoundingClientRect();
-      setDropdownPosition({ top: rect.top, left: rect.left})
+      setDropdownPosition({
+        top: rect.bottom,
+        left: rect.left,
+        width: rect.width,
+        height: rect.height,
+      });
     }
   }, [isDropdownOpen]);
   return (
     <Link
-      className={cn(styles.navigation__link)}
+      className={cn(
+        styles.navigation__link, 
+        pathname === href ? styles.navigation__link_active : ''
+      )}
       href={href}
       onClick={handleDropdownOpen}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
       ref={linkRef}
     >
-      <NavigationLinkText name={name} hasDropdown={!!subItems} />
+      <NavigationLinkText name={name} hasDropdown={!!subItems} isHovered={isDropdownOpen}/>
       {isDropdownOpen && subItems && (
-        <DropdownMenu 
-          items={subItems} 
+        <DropdownMenu
+          items={subItems}
           isPortal={!column}
           position={dropdownPosition}
         />
