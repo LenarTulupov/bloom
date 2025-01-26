@@ -1,16 +1,18 @@
 import cn from "classnames";
-import { INavigationItem } from "@/types/navigation-item.interface";
 import styles from "./navigation-item.module.scss";
+import { ReactNode } from "react";
+
+interface INavigationItem {
+  children: ReactNode;
+}
 
 export function NavigationItem({
-  column = false,
-  children
+  children,
 }: INavigationItem) {
   return (
     <li
       className={cn(
         styles.navigation__item,
-        column ? styles["navigation__item_column"] : ""
       )}
     >
       { children }

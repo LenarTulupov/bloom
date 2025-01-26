@@ -2,12 +2,17 @@ import cn from 'classnames'
 import styles from './hamburger-button.module.scss';
 import { useHamburger } from '@/hooks/use-hamburger';
 
-export default function HamburgerButton() {
+interface IHamburgerButton {
+  className?: string;
+}
+
+export default function HamburgerButton({ className }: IHamburgerButton) {
   const { isHamburgerOpened, handleHamburgerClick } = useHamburger();
   return (
     <button 
       className={cn(
         styles['hamburger__button'],
+        className || ''
       )}
       onClick={handleHamburgerClick}
     >

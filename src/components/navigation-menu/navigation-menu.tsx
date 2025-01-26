@@ -1,20 +1,30 @@
 import { navItems } from "@/constants/nav-items";
-import { Navigation, NavigationItem, NavigationLink, NavigationList } from "../ui/navigation";
+import {
+  Navigation,
+  NavigationItem,
+  NavigationLink,
+  NavigationList,
+} from "../ui/navigation";
+import cn from 'classnames'
+import styles from './navigation-menu.module.scss';
 
 interface INavigationMenu {
   className?: string;
+  column?: boolean;
 }
 
-export default function NavigationMenu({ className }: INavigationMenu) {
+export default function NavigationMenu({ className, column = false }: INavigationMenu) {
   return (
-    <Navigation className={className || ''}>
-      <NavigationList>
-        {navItems.map((item) => (
-          <NavigationItem key={item.id}>
-            <NavigationLink link={item} dropdown/>
-        </NavigationItem>
-        ))}
-      </NavigationList>
-    </Navigation>
+    <div className={cn(styles['navigation-menu'], className || '')}>
+      <Navigation>
+        <NavigationList column={column}>
+          {navItems.map((item) => (
+            <NavigationItem key={item.id}>
+              <NavigationLink link={item} column={column}/>
+            </NavigationItem>
+          ))}
+        </NavigationList>
+      </Navigation>
+    </div>
   );
 }

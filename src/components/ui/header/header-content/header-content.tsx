@@ -1,9 +1,9 @@
 import Link from "next/link";
 import Button from "../../button/button";
-import Hamburger from "../../hamburger/hamburger";
 import Logo from "../../logo/logo";
-import styles from './header-content.module.scss';
 import NavigationMenu from "@/components/navigation-menu/navigation-menu";
+import HamburgerButton from "../../hamburger-button/hamburger-button";
+import styles from './header-content.module.scss';
 
 export default function HeaderContent() {
   return (
@@ -11,7 +11,7 @@ export default function HeaderContent() {
       <Link href="/">
         <Logo className={styles['header__content-logo']}/>
       </Link>
-      <Hamburger />
+      <HamburgerButton className={styles['header__content-hamburger-button']}/>
       <NavigationMenu className={styles['header__content-navigation']}/>
       <Button 
         className={styles['header__content-button']}

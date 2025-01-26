@@ -1,23 +1,35 @@
-import { Dropdown, DropdownItem, DropdownLink, DropdownList } from "../ui/dropdown";
+import {
+  Dropdown,
+  DropdownItem,
+  DropdownLink,
+  DropdownList,
+} from "../ui/dropdown";
+import cn from "classnames";
+import { IDropdownMenu } from "@/types/dropdown-menu.interface";
+import styles from './dropdown-menu.module.scss';
 
-interface IDropdownMenu {
-  items: {
-    id: number;
-    name: string;
-    href: string;
-  }[]
-}
-
-export default function DropdownMenu({ items }: IDropdownMenu) {
+export default function DropdownMenu({
+  items,
+  className,
+  isPortal = false,
+  position
+}: IDropdownMenu) {
   return (
-    <Dropdown>
+    <Dropdown
+      className={cn(
+        className || "",
+        isPortal ? styles.dropdown_portal : ''
+      )}
+      isPortal={isPortal}
+      position={position}
+    >
       <DropdownList>
         {items.map((item) => (
           <DropdownItem key={item.id}>
-            <DropdownLink link={item}/>
+            <DropdownLink link={item} />
           </DropdownItem>
         ))}
       </DropdownList>
     </Dropdown>
-  )
+  );
 }

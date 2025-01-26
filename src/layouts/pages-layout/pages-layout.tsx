@@ -5,9 +5,8 @@ import Header from "@/components/ui/header/header";
 import { ReactNode, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Sidebar from "@/components/ui/sidebar/sidebar";
-import HamburgerMenu from "@/components/ui/hamburger-menu/hamburger-menu";
 import { useHamburger } from "@/hooks/use-hamburger";
-import { navItems } from "@/constants/nav-items";
+import NavigationMenu from "@/components/navigation-menu/navigation-menu";
 import styles from "./pages-layout.module.scss";
 
 interface IPagesLayout {
@@ -30,7 +29,7 @@ export default function LayoutsPagesLayout({ children }: IPagesLayout) {
       </>
       <>
         <Sidebar isOpened={isHamburgerOpened}>
-          <HamburgerMenu items={navItems}/>
+          <NavigationMenu column/>
         </Sidebar>
       </>
     </>

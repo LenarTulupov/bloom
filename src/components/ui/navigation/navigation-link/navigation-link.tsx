@@ -1,61 +1,58 @@
 import Link from "next/link";
 import cn from "classnames";
-import Icon from "@/components/ui/icon/icon";
-import { ICONS } from "@/constants/icons";
-import useHover from "@/hooks/use-hover";
-import styles from "./navigation-link.module.scss";
+import { INavigationLink } from "@/types/navigation-link.interface";
+import NavigationLinkText from "../navigation-text/navigation-link-text";
 import DropdownMenu from "@/components/dropdown-menu/dropdown-menu";
-import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import styles from "./navigation-link.module.scss";
 
-interface INavigationLink {
-  link: {
-    name: string;
-    href: string;
-    subItems?: {
-      id: number;
-      name: string;
-      href: string;
-    }[];
-  };
-  column?: boolean;
-  dropdown?: boolean;
-}
-
-export function NavigationLink({
-  link,
-  column,
-  dropdown,
-}: INavigationLink) {
-  const pathname = usePathname();
+export function NavigationLink({ link, column }: INavigationLink) {
   const { href, name, subItems } = link;
-  const { hover, onMouseEnter, onMouseLeave } = useHover();
-  const [isDropdownOpened, setIsDropdownOpened] = useState<boolean>(false);
-
-  const nameLink = name.slice(0, 1).toUpperCase() + name.slice(1);
-
+  const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
+  const [dropdownPosition, setDropdownPosition] = useState<{ top: number; left: number} | null>(null);
+  const linkRef = useRef<HTMLAnchorElement | null>(null);
+  
   const handleDropdownOpen = () => {
-    setIsDropdownOpened(p => !p);
-  }
+    if (column) {
+      setIsDropdownOpen((p) => !p);
+    }
+  };
+
+  const onMouseEnter = () => {
+    if (!column) {
+      setIsDropdownOpen(true);
+    }
+  };
+
+  const onMouseLeave = () => {
+    if (!column) {
+      setIsDropdownOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    if(isDropdownOpen && linkRef.current) {
+      const rect = linkRef.current.getBoundingClientRect();
+      setDropdownPosition({ top: rect.top, left: rect.left})
+    }
+  }, [isDropdownOpen]);
   return (
     <Link
-      className={cn(
-        styles.navigation__link,
-        pathname === href ? styles.navigation__link_active : "",
-        column ? styles.navigation__link_column : ""
-      )}
-      href={href.toLowerCase()}
+      className={cn(styles.navigation__link)}
+      href={href}
+      onClick={handleDropdownOpen}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
-      onClick={handleDropdownOpen}
+      ref={linkRef}
     >
-      {nameLink}
-      {dropdown && subItems && (
-        <Icon icon={ICONS.down} color="black" isHovered={hover} />
+      <NavigationLinkText name={name} hasDropdown={!!subItems} />
+      {isDropdownOpen && subItems && (
+        <DropdownMenu 
+          items={subItems} 
+          isPortal={!column}
+          position={dropdownPosition}
+        />
       )}
-      { isDropdownOpened && dropdown && subItems && 
-        <DropdownMenu items={subItems} /> 
-      }
     </Link>
   );
 }
