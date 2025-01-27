@@ -52,7 +52,8 @@ export function NavigationLink({ link, column }: INavigationLink) {
     <Link
       className={cn(
         styles.navigation__link, 
-        pathname === href ? styles.navigation__link_active : ''
+        pathname === href ? styles.navigation__link_active : '',
+        column ? styles.navigation__link_column : ''
       )}
       href={href}
       onClick={handleDropdownOpen}

@@ -1,1 +1,7 @@
-
+.navigation__item {
+  &_column {
+    &:not(:last-child) {
+      border-bottom: 1px solid #000;
+    }
+  }
+}

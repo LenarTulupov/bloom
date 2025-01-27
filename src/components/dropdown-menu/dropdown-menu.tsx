@@ -14,20 +14,22 @@ export default function DropdownMenu({
   isPortal = false,
   position,
 }: IDropdownMenu) {
-  return (
+  const dropdownContent = (
+    <Dropdown className={cn(className || "")} isPortal={isPortal}>
+      <DropdownList isPortal={isPortal}>
+        {items.map((item) => (
+          <DropdownItem key={item.id} isPortal={isPortal}>
+            <DropdownLink link={item} />
+          </DropdownItem>
+        ))}
+      </DropdownList>
+    </Dropdown>
+  );
+  return isPortal ? (
     <DropdownTransparentZone position={position} isPortal={isPortal}>
-      <Dropdown
-        className={cn(className || "")}
-        isPortal={isPortal}
-      >
-        <DropdownList>
-          {items.map((item) => (
-            <DropdownItem key={item.id}>
-              <DropdownLink link={item} />
-            </DropdownItem>
-          ))}
-        </DropdownList>
-      </Dropdown>
+      {dropdownContent}
     </DropdownTransparentZone>
+  ) : (
+    dropdownContent
   );
 }

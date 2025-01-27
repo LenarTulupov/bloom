@@ -19,7 +19,7 @@ export default function NavigationMenu({ className, column = false }: INavigatio
       <Navigation>
         <NavigationList column={column}>
           {navItems.map((item) => (
-            <NavigationItem key={item.id}>
+            <NavigationItem key={item.id} column={column}>
               <NavigationLink link={item} column={column}/>
             </NavigationItem>
           ))}

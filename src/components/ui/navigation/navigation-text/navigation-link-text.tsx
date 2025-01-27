@@ -16,7 +16,7 @@ export default function NavigationLinkText({ name, hasDropdown, isHovered }: INa
         <Icon 
           icon={ICONS.down} 
           color="black" 
-          isHovered={isHovered} 
+          isHovered={hasDropdown} 
           isHoverIcon={isHovered}
         /> 
       )}
