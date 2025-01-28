@@ -7,7 +7,9 @@ export default function BlogCard({ blog }: IBlogCard) {
   const { title, description, date, comments, image, href } = blog;
   return (
     <article className={styles["blog-card"]}>
-      <Image alt={title} src={image} width={424} height={290} />
+      <div className={styles["blog-card__img-container"]}>
+        <Image alt={title} src={image} width={424} height={290} className={styles.img}/>
+      </div>
       <BlogCardContent
         description={description}
         date={date}

@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import cn from 'classnames'
 import styles from './dropdown-item.module.scss';
 
 interface IDropdownItem {
@@ -8,7 +9,11 @@ interface IDropdownItem {
 
 export function DropdownItem({ children, isPortal = false }: IDropdownItem) {
   return (
-    <li className={`${styles['dropdown__item']} ${!isPortal ? styles.dropdown__item_portal : ''}`}>
+    <li className={cn(
+        styles.dropdown__item,
+        !isPortal ? styles.dropdown__item_portal : ''
+      )}
+    >
       { children }
     </li>
   )

@@ -18,6 +18,7 @@ import { IoClose as CloseIcon} from "react-icons/io5";
 import { FaAngleDown as DownIcon} from "react-icons/fa6";
 import { FaAngleUp as UpIcon} from "react-icons/fa6";
 import { MdKeyboardDoubleArrowRight as DoubleArrowIcon} from "react-icons/md";
+import { MdFavoriteBorder as FavoriteIcon} from "react-icons/md";
 
 
 export const ICONS: Record<string, FC<SVGProps<SVGSVGElement>>> = {
@@ -39,6 +40,7 @@ export const ICONS: Record<string, FC<SVGProps<SVGSVGElement>>> = {
   close: CloseIcon,
   down: DownIcon,
   up: UpIcon,
-  doubleArrow: DoubleArrowIcon
+  doubleArrow: DoubleArrowIcon,
+  favorite: FavoriteIcon
   
 }

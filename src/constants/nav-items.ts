@@ -19,7 +19,7 @@ export const navItems = [
     {id: 2, href: "#!", name: "testItem 2"},
   ] },
   { id: 5, href: "/FAQs", name: "FAQs" },
-  { id: 6, href: "wishlist", name: "wishlist" },
+  { id: 6, href: "favorite", name: "favorite" },
   { id: 7, href: "cart", name: "cart" },
   { id: 8, href: "/user/sign-in", name: "Sign in" },
 ];

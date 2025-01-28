@@ -1,4 +1,4 @@
-export default function Wishlist() {
+export default function Favorite() {
   return (
     <div>
       Favorites
