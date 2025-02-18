@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import Sidebar from "@/components/ui/sidebar/sidebar";
 import { useHamburger } from "@/hooks/use-hamburger";
 import NavigationMenu from "@/components/navigation-menu/navigation-menu";
+import { navItemsLeft } from "@/constants/nav-items";
 import styles from "./pages-layout.module.scss";
 
 interface IPagesLayout {
@@ -29,7 +30,7 @@ export default function LayoutsPagesLayout({ children }: IPagesLayout) {
       </>
       <>
         <Sidebar isOpened={isHamburgerOpened}>
-          <NavigationMenu column/>
+          <NavigationMenu column items={navItemsLeft}/>
         </Sidebar>
       </>
     </>
