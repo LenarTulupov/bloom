@@ -1,31 +1,32 @@
 "use client";
 
 import Container from "@/components/ui/container/container";
-import ProductCard from "@/components/product-card/product-card";
+// import ProductCard from "@/components/product-card/product-card";
 import ProductsGrid from "@/components/ui/products-grid/products-grid";
-import { useAppDispatch, useAppSelector } from "@/store/hooks";
-import { useEffect } from "react";
-import { fetchProducts } from "@/store/features/products-slice";
-import ProductSkeleton from "@/components/ui/product-skeleton/product-skeleton";
+// import { useAppDispatch, useAppSelector } from "@/store/hooks";
+// import { useEffect } from "react";
+// import { fetchProducts } from "@/store/features/products-slice";
+// import ProductSkeleton from "@/components/ui/product-skeleton/product-skeleton";
 import styles from "./products.module.scss";
 
 export default function Products() {
-  const dispatch = useAppDispatch();
-  const { products, loading, error } = useAppSelector(state => state.products);
+  // const dispatch = useAppDispatch();
+  // const { products, loading, error } = useAppSelector(state => state.products);
   
-  useEffect(() => {
-    dispatch(fetchProducts());
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(fetchProducts());
+  // }, [dispatch]);
 
-  if(error) {
-    return <div>Error: {error}</div>
-  }
+  // if(error) {
+  //   return <div>Error: {error}</div>
+  // }
 
   return (
     <div className={styles["products"]}>
       <Container>
         <ProductsGrid>
-          {!loading ? (
+          <div>card</div>
+          {/* {!loading ? (
             Array.from({ length: 10 }).map((_, index) => (
               <ProductSkeleton key={index} />
             ))
@@ -37,7 +38,7 @@ export default function Products() {
             ) : (
               <div>No products available</div>
             )
-          )}
+          )} */}
         </ProductsGrid>
       </Container>
     </div>

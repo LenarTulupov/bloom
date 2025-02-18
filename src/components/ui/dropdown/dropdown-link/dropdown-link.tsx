@@ -11,9 +11,10 @@ interface IDropdownLink {
 
 export function DropdownLink({ link }: IDropdownLink) {
   const { name, href } = link;
+  const nameUpper = name.slice(0, 1).toUpperCase() + name.slice(1);
   return (
     <Link href={href} className={styles['dropdown__link']}>
-      { name }
+      { nameUpper }
     </Link>
   )
 }

@@ -18,7 +18,10 @@ export default function HeaderContent() {
         <Logo/>
       </Link>
       <NavigationMenu 
-        className={cn(styles['header__content-navigation'], styles['header__content-navigation-end'])} 
+        className={cn(
+          styles['header__content-navigation'], 
+          styles['header__content-navigation_end']
+        )} 
         items={navItemsRight}
         icon
       />

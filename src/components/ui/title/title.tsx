@@ -1,34 +1,11 @@
-import { ElementType } from 'react';
-import { ITitle } from '@/types/title.interface';
-import cn from 'classnames'
-import styles from './title.module.scss';
+import { ReactNode } from "react"
 
-export default function Title({
-  title,
-  children,
-  className,
-  color = 'black',
-  size = 'md',
-  background = false,
-  h = 2,
-  rounded = false,
-  border = false,
-  ...props }: ITitle) {
-    const Tag: ElementType = `h${h}`
+interface ITitle {
+  children: ReactNode;
+}
+
+export default function Title({ children }: ITitle) {
   return (
-    <Tag
-      className={cn(
-        styles.title,
-        className || '',
-        styles[color],
-        styles[size],
-        background ? styles.background : '',
-        rounded ? styles.rounded : '',
-        border ? styles.border : ''
-      )}
-      {...props}
-    >
-      {title || children }
-    </Tag>
+    <div>{children}</div>
   )
-};
+}
