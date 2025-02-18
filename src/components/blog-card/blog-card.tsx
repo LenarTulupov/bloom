@@ -8,7 +8,13 @@ export default function BlogCard({ blog }: IBlogCard) {
   return (
     <article className={styles["blog-card"]}>
       <div className={styles["blog-card__img-container"]}>
-        <Image alt={title} src={image} width={424} height={290} className={styles.img}/>
+        <Image 
+          className={styles.img}
+          alt={title} 
+          src={image} 
+          width={424} 
+          height={290} 
+        />
       </div>
       <BlogCardContent
         description={description}

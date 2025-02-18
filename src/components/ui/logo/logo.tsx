@@ -6,7 +6,7 @@ interface ILogo {
 }
 
 export default function Logo({ className }: ILogo) {
-  const logo = "/logo.png";
+  const logo = "/logo/logo.png";
   return (
     <img 
       className={cn(

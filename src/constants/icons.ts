@@ -19,6 +19,9 @@ import { FaAngleDown as DownIcon} from "react-icons/fa6";
 import { FaAngleUp as UpIcon} from "react-icons/fa6";
 import { MdKeyboardDoubleArrowRight as DoubleArrowIcon} from "react-icons/md";
 import { MdFavoriteBorder as FavoriteIcon} from "react-icons/md";
+import { TbSearch as SearchIcon } from "react-icons/tb";
+import { LuUserRound as LoginIcon } from "react-icons/lu";
+import { BsCart2 as CartIcon } from "react-icons/bs";
 
 
 export const ICONS: Record<string, FC<SVGProps<SVGSVGElement>>> = {
@@ -41,6 +44,9 @@ export const ICONS: Record<string, FC<SVGProps<SVGSVGElement>>> = {
   down: DownIcon,
   up: UpIcon,
   doubleArrow: DoubleArrowIcon,
-  favorite: FavoriteIcon
+  favorite: FavoriteIcon,
+  search: SearchIcon,
+  login: LoginIcon,
+  cart: CartIcon,
   
 }
