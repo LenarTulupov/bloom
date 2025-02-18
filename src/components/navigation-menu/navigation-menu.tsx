@@ -1,4 +1,3 @@
-import { navItemsLeft } from "@/constants/nav-items";
 import {
   Navigation,
   NavigationItem,

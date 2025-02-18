@@ -1,7 +1,15 @@
 .header__content {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  &-logo {
+    width: fit-content;
+    justify-self: center;
+    align-self: center;
+  }
+  &-navigation-end {
+    justify-self: end;
+  }
 }
 @media(min-width: 992px) {
   .header__content-hamburger-button {

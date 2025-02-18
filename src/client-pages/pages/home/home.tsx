@@ -5,7 +5,6 @@ import Team from "./team/team";
 import Process from "./process/process";
 import Blog from "./blog/blog";
 import Ready from "./ready/ready";
-import Questions from "./questions/questions";
 import styles from "./home.module.scss";
 
 export default function Home() {
@@ -18,7 +17,6 @@ export default function Home() {
       <Process />
       <Blog />
       <Ready />
-      <Questions />
     </div>
   );
 }
