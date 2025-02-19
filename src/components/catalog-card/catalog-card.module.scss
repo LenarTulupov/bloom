@@ -21,4 +21,8 @@
     height: 100%;
     object-fit: cover;
   }
+  &__title {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
 }

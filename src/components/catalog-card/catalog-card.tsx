@@ -12,7 +12,7 @@ export default function CatalogCard({ name, link }: ICatalogCard) {
     <article className={styles["catalog-card"]}>
       <Link href={link}>
         <div className={styles["catalog-card__content"]}>
-          <div>{name}</div>
+          <div className={styles['catalog-card__title']}>{name}</div>
           <div className={styles["catalog-card__img-wrapper"]}>
             <Image
               className={styles["catalog-card__img"]}
