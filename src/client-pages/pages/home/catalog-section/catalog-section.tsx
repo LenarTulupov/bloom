@@ -11,7 +11,7 @@ export default function CatalogSection() {
   return (
     <section>
       <Container>
-        <div>
+        <div className={styles['catalog-section__content']}>
           <div className={styles['catalog-section__text']}>
             <Title>Catalog</Title>
             <Link href="/catalog">

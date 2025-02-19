@@ -1,4 +1,5 @@
 import { ReactNode } from "react"
+import styles from './title.module.scss'
 
 interface ITitle {
   children: ReactNode;
@@ -6,6 +7,6 @@ interface ITitle {
 
 export default function Title({ children }: ITitle) {
   return (
-    <div>{children}</div>
+    <div className={styles.title}>{children}</div>
   )
 }

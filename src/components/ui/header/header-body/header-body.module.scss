@@ -1,7 +1,11 @@
-.header__content {
-  align-items: center;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.header__body {
+  height: 85px;
+  &-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    height: 100%;
+  }
   &-logo {
     width: fit-content;
     justify-self: center;
@@ -12,17 +16,17 @@
   }
 }
 @media(min-width: 992px) {
-  .header__content-hamburger-button {
+  .header__body-hamburger-button {
     display: none;
   }
 }
 @media(max-width: 1200px) {
-  .header__content-button {
+  .header__body-button {
     display: none;
   }
 }
 @media(max-width: 992px) {
-  .header__content-navigation {
+  .header__body-navigation {
     display: none;
   }
 }

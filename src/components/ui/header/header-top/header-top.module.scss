@@ -1,0 +1,27 @@
+.header__top {
+  background-color: var(--primary-color);
+  text-align: center;
+  color: var(--white-color);
+  height: 30px;
+  &-content {
+    @extend .content;
+  }
+  .content {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    font-size: 12px;
+    height: 100%;
+    align-items: center;
+  }
+  &-text {
+    grid-column-start: 2;
+  }
+  &-current {
+    justify-self: end;
+    width: fit-content;
+    background-color: transparent;
+    border: none;
+    color: var(--white-color);
+    cursor: pointer;
+  }
+}
