@@ -3,9 +3,9 @@ import "./globals.scss";
 import Providers from "@/utils/providers";
 
 export const metadata: Metadata = {
-  title: "NewBloom",
+  title: "Mire",
   description:
-    "Surrogacy Agency trusted surrogacy services in Georgia with transparency, speed, and care",
+    "Mire e-commerce",
   icons: {
     icon: "/favicon.png",
   },

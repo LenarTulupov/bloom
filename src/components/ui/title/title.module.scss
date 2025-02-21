@@ -1,4 +1,8 @@
 .title {
   font-size: 20px;
   font-weight: 700;
+  &_bold {
+    font-weight: 800;
+    font-size: 48px;
+  }
 }

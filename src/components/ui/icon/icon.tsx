@@ -8,15 +8,30 @@ export default function Icon({
   size = "md",
   className,
   isHovered,
-  isHoverIcon
+  isHoverIcon,
 }: IIcon) {
+  if (typeof Icon === "string") {
+    return (
+      <img
+        src={Icon}
+        className={cn(
+          styles["icon"],
+          !isHovered ? styles[color] : styles[`${color}_hovered`],
+          styles[size],
+          isHoverIcon ? styles["icon__hover-icon"] : "",
+          className || ""
+        )}
+        alt="icon"
+      />
+    );
+  }
   return (
     <Icon
       className={cn(
         styles["icon"],
         !isHovered ? styles[color] : styles[`${color}_hovered`],
         styles[size],
-        isHoverIcon ? styles["icon__hover-icon"] : '',
+        isHoverIcon ? styles["icon__hover-icon"] : "",
         className || ""
       )}
     />

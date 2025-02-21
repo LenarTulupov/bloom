@@ -1,5 +1,6 @@
 export const navItemsLeft = [
   { id: 1, href: "/catalog", name: "catalog", subItems: [
+    {id: 1, href: "/catalog/all-clothing", name: "all-clothing"},
     {id: 1, href: "/catalog/trousers", name: "trousers"},
     {id: 2, href: "/catalog/knitwear", name: "knitwear"},
     {id: 3, href: "/catalog/coats-jackets", name: "coats-jackets"},
@@ -10,6 +11,7 @@ export const navItemsLeft = [
     {id: 8, href: "/catalog/pants-jeans", name: "pants & jeans"},
     {id: 9, href: "/catalog/skirts", name: "skirts"},
     {id: 10, href: "/catalog/suits-sets", name: "suits & sets"},
+    {id: 11, href: "/catalog/sales", name: "sales"},
   ] },
   { id: 2, href: "/new in", name: "new in" },
   { id: 3, href: "/trends", name: "trends"},
