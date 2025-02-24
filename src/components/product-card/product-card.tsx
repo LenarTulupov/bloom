@@ -4,7 +4,7 @@ import { IProduct } from "@/types/product.interface";
 import styles from "./product-card.module.scss";
 import { useState } from "react";
 import Link from "next/link";
-import Icon from "../ui/icon/icon";
+import Icon from "../icon/icon";
 import { ICONS } from "@/constants/icons";
 import Button from "../ui/button/button";
 

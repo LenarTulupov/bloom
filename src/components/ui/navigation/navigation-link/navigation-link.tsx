@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import styles from "./navigation-link.module.scss";
 
-export function NavigationLink({ link, column, icon = false }: INavigationLink) {
+export function NavigationLink({ link, column, icon = false, isScrolled }: INavigationLink) {
   const { href, name, subItems } = link;
   const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
   const pathname = usePathname();
@@ -53,7 +53,8 @@ export function NavigationLink({ link, column, icon = false }: INavigationLink) 
       className={cn(
         styles.navigation__link, 
         pathname === href ? styles.navigation__link_active : '',
-        column ? styles.navigation__link_column : ''
+        column ? styles.navigation__link_column : '',
+        !isScrolled ? styles.navigation__link_scrolled : ""
       )}
       href={href}
       onClick={handleDropdownOpen}
@@ -64,8 +65,8 @@ export function NavigationLink({ link, column, icon = false }: INavigationLink) 
       <NavigationLinkText 
         name={name} 
         hasDropdown={!!subItems} 
-        isHovered={isDropdownOpen}
         icon={icon}
+        isScrolled={isScrolled}
       />
       {isDropdownOpen && subItems && (
         <DropdownMenu

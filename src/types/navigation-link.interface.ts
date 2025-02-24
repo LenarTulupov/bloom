@@ -10,4 +10,5 @@ export interface INavigationLink {
   }
   column?: boolean;
   icon?: boolean;
+  isScrolled?: boolean;
 }

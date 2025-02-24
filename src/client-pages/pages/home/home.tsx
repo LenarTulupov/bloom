@@ -1,4 +1,4 @@
-import SalesBanner from "@/components/ui/sales-banner/sales-banner";
+import SalesBanner from "@/components/sales-banner/sales-banner";
 import CatalogSection from "./catalog-section/catalog-section";
 import styles from "./home.module.scss";
 import CollectionsCarousel from "./collections-carousel/collections-carousel";

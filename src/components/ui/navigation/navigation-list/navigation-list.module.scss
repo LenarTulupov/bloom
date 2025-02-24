@@ -1,6 +1,10 @@
 .navigation__list {
   display: flex;
   font-weight: 600;
+  color: var(--primary-color);
+  &_scrolled {
+    color: white;
+  }
 }
 
 .column {
