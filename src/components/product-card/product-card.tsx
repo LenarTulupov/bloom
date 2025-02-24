@@ -1,12 +1,11 @@
 import Image from "next/image";
 import Title from "../ui/title/title";
 import { IProduct } from "@/types/product.interface";
-import styles from "./product-card.module.scss";
 import { useState } from "react";
 import Link from "next/link";
 import Icon from "../icon/icon";
-import { ICONS } from "@/constants/icons";
 import Button from "../ui/button/button";
+import styles from "./product-card.module.scss";
 
 export default function ProductCard({ product }: { product: IProduct }) {
   const { title, thumbnail, price_new, color } = product;
@@ -38,7 +37,7 @@ export default function ProductCard({ product }: { product: IProduct }) {
           {showQuickView && (
             <Button className={styles["product-card__quick-view"]}>Quick View</Button>
           )}
-          <Icon icon={ICONS.favorite} className={styles['product-card__favorite']}/>
+          <Icon name="favorite" className={styles['product-card__favorite']}/>
         </div>
         <Title>{title}</Title>
         <div>{price_new}</div>
