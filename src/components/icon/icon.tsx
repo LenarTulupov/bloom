@@ -3,6 +3,7 @@ import cn from 'classnames';
 import Image from 'next/image';
 import { FC, SVGProps } from 'react';
 import styles from './icon.module.scss';
+import { usePathname } from "next/navigation";
 
 interface IIcon {
   name: string;
@@ -26,6 +27,7 @@ export default function Icon({
   size = "lg", 
   className, 
   isScrolled }: IIcon) {
+    const pathname = usePathname();
   const IconComponent = ICONS[name];
 
   if (!IconComponent) {
@@ -43,7 +45,7 @@ export default function Icon({
         className={cn(
           styles.icon,
           styles[size], 
-          isScrolled ? styles.white : styles[color],
+          pathname === '/' ? isScrolled ? styles.white : styles[color] : "",
           className || "",
         )}
         width={dimensions.width}
@@ -58,7 +60,7 @@ export default function Icon({
         className={cn(
           styles.icon,
           styles[size], 
-          isScrolled ? styles.white : styles[color],
+          pathname === '/' ? isScrolled ? styles.white : styles[color] : "",
           className || "",
         )}
       />

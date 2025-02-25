@@ -9,6 +9,7 @@ import NavigationMenu from "@/components/navigation-menu/navigation-menu";
 import { navItemsLeft } from "@/constants/nav-items";
 import Footer from "@/components/footer/footer";
 import styles from "./pages-layout.module.scss";
+import cn from 'classnames';
 
 interface IPagesLayout {
   children: ReactNode;
@@ -25,7 +26,12 @@ export default function LayoutsPagesLayout({ children }: IPagesLayout) {
     <>
       <>
         <Header />
-        <main className={styles.children}>{children}</main>
+          <main className={cn(
+            styles.children, 
+            pathname === "/" ? styles.children_home : ""
+          )}>
+            {children}
+          </main>
         <Footer />
       </>
       <>
