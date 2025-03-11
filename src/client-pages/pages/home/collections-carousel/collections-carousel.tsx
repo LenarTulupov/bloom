@@ -27,7 +27,7 @@ export default function CollectionsCarousel() {
           Ваш браузер не поддерживает видео тег.
         </video>
         <div className={styles.text}>
-          <Title bold className={styles.title}>
+          <Title bold className={styles.title} color="white">
             Collection
           </Title>
           <div className={styles.descr}>

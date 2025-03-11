@@ -1,0 +1,9 @@
+.footer-header__social-icons {
+  display: flex;
+  column-gap: 8px;
+}
+.footer-header__social-icon {
+  padding: 10px;
+  background-color: var(--primary-color);
+  border-radius: var(--border-radius);
+}

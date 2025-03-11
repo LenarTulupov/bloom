@@ -12,15 +12,18 @@ export default function NavigationMenu({
   className, 
   column = false, 
   items, 
-  icon = false,
-  isScrolled = false }: INavigationMenu) {
+  icon = false }: INavigationMenu) {
   return (
-    <div className={cn(styles['navigation-menu'], className || '')}>
+    <div className={cn(styles['navigation-menu'], className)}>
       <Navigation>
-        <NavigationList column={column} isScrolled={isScrolled}>
+        <NavigationList column={column}>
           {items.map((item) => (
             <NavigationItem key={item.id} column={column}>
-              <NavigationLink link={item} column={column} icon={icon} isScrolled={isScrolled}/>
+              <NavigationLink 
+                link={item} 
+                column={column} 
+                icon={icon} 
+              />
             </NavigationItem>
           ))}
         </NavigationList>

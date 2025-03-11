@@ -1,0 +1,15 @@
+.dropdown-panel__list-subitems {
+  // @extend .subitems;
+  display: flex;
+  flex-direction: column;
+  column-gap: 38px;
+  padding: 16px 0;
+  font-size: 14px;
+}
+.subitems {
+  // padding: 16px 0;
+  // font-size: 14px;
+  // display: flex;
+  // flex-direction: column;
+  // column-gap: 8px;
+}

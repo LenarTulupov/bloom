@@ -3,6 +3,9 @@
   &_scrolled {
     background-color: var(--background);
   }
+  &_dropdown {
+    background-color: var(--background);
+  }
   &-content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

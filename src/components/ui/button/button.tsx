@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, ReactNode } from 'react';
+import { ButtonHTMLAttributes, ReactNode, RefObject } from 'react';
 import cn from 'classnames';  
 import styles from './button.module.scss';
 
@@ -6,6 +6,7 @@ interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
   className?: string;
   color?: "primary";
+  ref?: RefObject<HTMLButtonElement>;
 }
 
 export default function Button({ 
@@ -17,8 +18,8 @@ export default function Button({
     <button 
       className={cn(
         styles.button, 
-        styles[`button_${color}`], 
-        className || ""
+        styles[color], 
+        className
       )} 
       {...props}
     >

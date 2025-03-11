@@ -2,7 +2,7 @@ export interface INavigationLink {
   link: {
     name: string;
     href: string;
-    subItems?: {
+    categories?: {
       id: number;
       name: string;
       href: string;

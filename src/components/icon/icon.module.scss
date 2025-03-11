@@ -23,6 +23,7 @@
 
 .primary {
   color: var(--primary-color);
+  // filter: none !important;
 }
 .white {
     filter: brightness(0) invert(1);

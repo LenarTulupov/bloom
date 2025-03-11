@@ -5,7 +5,6 @@ import {
   DropdownList,
   DropdownTransparentZone,
 } from "../ui/dropdown";
-import cn from "classnames";
 import { IDropdownMenu } from "@/types/dropdown-menu.interface";
 
 export default function DropdownMenu({
@@ -14,8 +13,9 @@ export default function DropdownMenu({
   isPortal = false,
   position,
 }: IDropdownMenu) {
+  console.log(items)
   const dropdownContent = (
-    <Dropdown className={cn(className || "")} isPortal={isPortal}>
+    <Dropdown className={className || ""} isPortal={isPortal}>
       <DropdownList isPortal={isPortal}>
         {items.map((item) => (
           <DropdownItem key={item.id} isPortal={isPortal}>

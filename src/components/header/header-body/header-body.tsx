@@ -5,31 +5,38 @@ import HamburgerButton from "../../hamburger-button/hamburger-button";
 import { navItemsLeft, navItemsRight } from "@/constants/nav-items";
 import cn from "classnames";
 import Container from "../../ui/container/container";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { usePathname } from "next/navigation";
+import { useAppDispatch, useAppSelector } from "@/store/hooks";
+import { setIsScrolled } from "@/store/features/scroll-slice";
 import styles from "./header-body.module.scss";
 
 export default function HeaderBody() {
-  const [isScrolled, setIsScrolled] = useState<boolean>(false);
+  const isScrolled = useAppSelector(state => state.scrollState.isScrolled);
+  const dispatch = useAppDispatch();
+  const pathname = usePathname();
+  const isDropdownOpened = useAppSelector(state => state.dropdownState.isDropdownOpened);
 
   useEffect(() => {
     const handleScroll = () => {
-      if(window.scrollY > 0) {
-        setIsScrolled(true);
+      if (window.scrollY > 0) {
+        dispatch(setIsScrolled(true));
       } else {
-        setIsScrolled(false);
+        dispatch(setIsScrolled(false));
       }
-    }
-    window.addEventListener('scroll', handleScroll);
+    };
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
-    }
-  }, []);
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [dispatch]);
   return (
     <div
       className={cn(
         styles.header__body,
-        isScrolled ? styles.header__body_scrolled : ""
+        isScrolled ? styles.header__body_scrolled : "",
+        isDropdownOpened ? styles.header__body_dropdown : ""
       )}
     >
       <Container>
@@ -40,10 +47,11 @@ export default function HeaderBody() {
           <NavigationMenu
             className={styles["header__body-navigation"]}
             items={navItemsLeft}
-            isScrolled={isScrolled}
           />
           <Link href="/" className={styles["header__body-logo"]}>
-            <Logo isScrolled={isScrolled}/>
+            <Logo
+              color={pathname === "/" ? "white" : "black"}
+            />
           </Link>
           <NavigationMenu
             className={cn(
@@ -52,7 +60,6 @@ export default function HeaderBody() {
             )}
             items={navItemsRight}
             icon
-            isScrolled={isScrolled}
           />
         </div>
       </Container>

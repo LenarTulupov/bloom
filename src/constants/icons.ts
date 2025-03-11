@@ -5,5 +5,9 @@ export const ICONS: Record<string, FC<SVGProps<SVGSVGElement>> | string> = {
   search: '/icons/search.svg',
   login: '/icons/user.svg',
   cart: '/icons/cart.svg',
-  arrow: '/icons/arrow.svg'
+  arrow: '/icons/arrow.svg',
+  facebook: '/icons/facebook.svg',
+  instagram: '/icons/instagram.svg',
+  twitter: '/icons/twitter.svg',
+  linkedin: '/icons/linkedin.svg'
 }

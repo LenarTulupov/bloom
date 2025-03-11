@@ -6,7 +6,12 @@
   border: none;
   cursor: pointer;
   width: 100%;
-  &_primary {
-    background-color: var(--primary-color);
+}
+
+.primary {
+  background-color: var(--primary-color);
+  transition: background-color .3s ease-in-out;
+  &:hover {
+    background-color: var(--primary-hover);
   }
 }

@@ -11,6 +11,7 @@
   height: 100%;
   object-fit: cover; 
   // opacity: .5;
+  object-position: top;
 }
 
 .text {
@@ -25,4 +26,5 @@
 }
 .descr {
   margin-bottom: 24px;
+  color: var(--white-color);
 }

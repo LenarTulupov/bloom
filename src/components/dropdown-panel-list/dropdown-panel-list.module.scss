@@ -1,0 +1,20 @@
+.dropdown-panel__list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, auto); 
+  column-gap: 48px;
+  margin: 24px 0;
+
+  & > *:first-child {
+    grid-column: 1 / -1; 
+  }
+  & > *:not(:first-child) {
+    grid-row: 2;
+  }
+}
+.dropdown-panel__item {
+  color: var(--primary-color);
+  &-title {
+    text-transform: uppercase;
+  }
+}

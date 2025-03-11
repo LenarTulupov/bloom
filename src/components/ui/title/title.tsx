@@ -6,11 +6,12 @@ interface ITitle {
   children: ReactNode;
   bold?: boolean;
   className?: string;
+  color?: "white" | "black"
 }
 
-export default function Title({ children, bold = false, className }: ITitle) {
+export default function Title({ children, bold = false, className, color = "black" }: ITitle) {
   return (
-    <div className={cn(styles.title, { [styles.title_bold]: bold }, className || "")}>
+    <div className={cn(styles.title, styles[color], { [styles.title_bold]: bold }, className || "")}>
       {children}
     </div>
   );

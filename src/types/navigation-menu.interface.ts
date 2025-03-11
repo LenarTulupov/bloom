@@ -13,4 +13,5 @@ export interface INavigationMenu {
   }[];
   icon?: boolean;
   isScrolled?: boolean;
+  isDropdownOpened?: boolean;
 }

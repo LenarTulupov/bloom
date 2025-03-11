@@ -2,14 +2,21 @@ import Link from "next/link";
 import cn from "classnames";
 import { INavigationLink } from "@/types/navigation-link.interface";
 import NavigationLinkText from "../navigation-text/navigation-link-text";
-import DropdownMenu from "@/components/dropdown-menu/dropdown-menu";
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
+import DropdownPanel from "@/components/dropdown-panel/dropdown-panel";
+import { useAppDispatch, useAppSelector } from "@/store/hooks";
+import { setIsDropdownOpened } from "@/store/features/dropdown-slice";
 import styles from "./navigation-link.module.scss";
 
-export function NavigationLink({ link, column, icon = false, isScrolled }: INavigationLink) {
-  const { href, name, subItems } = link;
-  const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
+export function NavigationLink({ 
+  link, 
+  column, 
+  icon = false}: INavigationLink) {
+  const { href, name, categories } = link;
+  const dispatch = useAppDispatch();
+  const isDropdownOpened = useAppSelector(state => state.dropdownState.isDropdownOpened)
+  const isScrolled = useAppSelector(state => state.scrollState.isScrolled);
   const pathname = usePathname();
   const [dropdownPosition, setDropdownPosition] = useState<{
     top: number;
@@ -21,24 +28,24 @@ export function NavigationLink({ link, column, icon = false, isScrolled }: INavi
 
   const handleDropdownOpen = () => {
     if (column) {
-      setIsDropdownOpen((p) => !p);
+      dispatch(setIsDropdownOpened(!isDropdownOpened));
     }
   };
 
   const onMouseEnter = () => {
     if (!column) {
-      setIsDropdownOpen(true);
+      dispatch(setIsDropdownOpened(true));
     }
   };
 
   const onMouseLeave = () => {
     if (!column) {
-      setIsDropdownOpen(false);
+      dispatch(setIsDropdownOpened(false));
     }
   };
 
   useEffect(() => {
-    if (isDropdownOpen && linkRef.current) {
+    if (isDropdownOpened && linkRef.current) {
       const rect = linkRef.current.getBoundingClientRect();
       setDropdownPosition({
         top: rect.bottom,
@@ -47,7 +54,7 @@ export function NavigationLink({ link, column, icon = false, isScrolled }: INavi
         height: rect.height,
       });
     }
-  }, [isDropdownOpen]);
+  }, [isDropdownOpened]);
   return (
     <Link
       className={cn(
@@ -64,16 +71,11 @@ export function NavigationLink({ link, column, icon = false, isScrolled }: INavi
     >
       <NavigationLinkText 
         name={name} 
-        hasDropdown={!!subItems} 
+        hasDropdown={!!categories} 
         icon={icon}
-        isScrolled={isScrolled}
       />
-      {isDropdownOpen && subItems && (
-        <DropdownMenu
-          items={subItems}
-          isPortal={!column}
-          position={dropdownPosition}
-        />
+      {isDropdownOpened && categories && (
+        <DropdownPanel items={categories}/>
       )}
     </Link>
   );

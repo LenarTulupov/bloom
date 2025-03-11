@@ -3,16 +3,26 @@
   flex-direction: column;
   column-gap: 10px;
   padding: 16px;
+
   &_active {
-    color: var(--primary-color);
+    .navigation__link-text {
+      color: var(--primary-color);
+    }
   }
+
   &:hover {
-    color: var(--primary-color);
+    .navigation__link-text {
+      color: var(--primary-color);
+    }
   }
+
   &_column {
     padding: 15px 0;
   }
+
   &_scrolled:hover {
-    color: #cecece;
+    .navigation__link-text {
+      color: var(--white-hover);
+    }
   }
 }
