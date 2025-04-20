@@ -9,9 +9,15 @@ export default function CatalogPageClient() {
       <Container>
         <ProductsGrid>
           {navItemsLeft.map((item) =>
-            item.subItems?.map((subItem) => (
-                <CatalogCard key={subItem.id} name={subItem.name} link={subItem.href} />
-            ))
+            item.categories?.map((category) =>
+              category.href ? (
+                <CatalogCard
+                  key={category.id}
+                  name={category.category}
+                  link={category.href}
+                />
+              ) : null
+            )
           )}
         </ProductsGrid>
       </Container>
