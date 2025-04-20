@@ -10,13 +10,15 @@ export default function FooterHeader() {
       <div>
         <Logo />
       </div>
-      <div className={styles['footer-header__social-icons']}>
+      <div className={styles["footer-header__social-icons"]}>
         {footerLinks.map((item) => (
-          <>
-            <Link href={item.href} className={styles["footer-header__social-icon"]}>
-              <Icon key={item.id} name={item.name} />
-            </Link>
-          </>
+          <Link
+            key={item.id}
+            href={item.href}
+            className={styles["footer-header__social-icon"]}
+          >
+            <Icon name={item.name} />
+          </Link>
         ))}
       </div>
     </header>

@@ -1,11 +1,18 @@
 export interface IDropdownPanel {
-  items: {
+  item: {
     id: number;
-    category: string;
-    categoryItems: {
+    name: string;
+    href?: string;
+    categories?: { 
       id: number;
-      href: string;
-      name: string;
+      href?: string;
+      category: string;
+      categoryItems?: {
+        id: number;
+        name: string;
+        href: string;
+      }[];
     }[];
-  }[];
-}
+  },
+  activeCategory: string | null;
+};

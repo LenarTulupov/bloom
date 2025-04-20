@@ -18,7 +18,11 @@ export default function NavigationMenu({
       <Navigation>
         <NavigationList column={column}>
           {items.map((item) => (
-            <NavigationItem key={item.id} column={column}>
+            <NavigationItem 
+              key={item.id} 
+              column={column} 
+              item={item}
+            >
               <NavigationLink 
                 link={item} 
                 column={column} 

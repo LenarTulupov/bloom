@@ -1,7 +1,8 @@
 .dropdown-panel {
-  position: absolute;
+  position: fixed;
   top: var(--header-height);
   left: 0;
-  background-color: var(--background);
   width: 100%;
+  background-color: var(--background);
+  z-index: 10;
 }

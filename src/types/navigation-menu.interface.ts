@@ -5,11 +5,16 @@ export interface INavigationMenu {
     id: number;
     href: string;
     name: string;
-    subitems?: {
+    categories?: {
       id: number;
-      href: string;
-      name: string;
-    }[]
+      href?: string;
+      category: string;
+      categoryItems?: {
+        id: number;
+        name: string;
+        href: string;
+      }[];
+    }[];
   }[];
   icon?: boolean;
   isScrolled?: boolean;

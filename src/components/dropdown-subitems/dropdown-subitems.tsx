@@ -3,14 +3,14 @@ import cn from "classnames";
 import styles from './dropdown-subitems.module.scss';
 
 interface IDropdownSubitems {
-  items: {
+  subitems: {
     id: number;
     href: string;
     name: string;
   }[];
 }
 
-export default function DropdownSubitems({ items }: IDropdownSubitems) {
+export default function DropdownSubitems({ subitems }: IDropdownSubitems) {
   return (
     <ul
     className={cn(
@@ -18,13 +18,13 @@ export default function DropdownSubitems({ items }: IDropdownSubitems) {
       styles.subitems
     )}
   >
-    {items?.map((categoryItem) => (
-      <li className={styles.subitems__item} key={categoryItem.id}>
+    {subitems.map((subitem) => (
+      <li className={styles.subitems__item} key={subitem.id}>
         <Link
-          href={categoryItem.href}
+          href={subitem.href}
           className={styles.subitems__link}
         >
-          {categoryItem.name}
+          {subitem.name}
         </Link>
       </li>
     ))}
