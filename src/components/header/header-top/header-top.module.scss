@@ -17,6 +17,8 @@
     grid-column-start: 2;
   }
   &-current {
+    display: flex;
+    align-items: center;
     justify-self: end;
     width: fit-content;
     background-color: transparent;

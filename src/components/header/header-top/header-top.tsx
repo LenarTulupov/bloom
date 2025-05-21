@@ -8,6 +8,7 @@ import {
   DropdownList,
   DropdownTransparentZone,
 } from "../../ui/dropdown";
+import ArrowIcon from "@/components/ui/icons/arrow-icon/arrow-icon";
 import styles from "./header-top.module.scss";
 
 export default function HeaderTop() {
@@ -28,6 +29,7 @@ export default function HeaderTop() {
   const handleSelectsOpen = () => {
     setIsSelectsOpened((p) => !p);
   };
+
 
   const selects = (
     <Dropdown isPortal>
@@ -68,6 +70,7 @@ export default function HeaderTop() {
             onClick={handleSelectsOpen}
           >
             {currentLanguage}
+            <ArrowIcon isHovered={isSelectsOpened} color="white"/>
           </button>
           {isSelectsOpened && (
             <DropdownTransparentZone position={selectsPosition}>

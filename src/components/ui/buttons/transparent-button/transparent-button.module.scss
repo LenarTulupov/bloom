@@ -1,0 +1,9 @@
+.transparent-button {
+  align-self: flex-end;
+  padding: 18px 72px !important;
+  background-color: transparent !important;
+  outline: 1px solid #fff;
+  &:hover {
+    background-color: #f4f4f43f !important;
+  }
+}

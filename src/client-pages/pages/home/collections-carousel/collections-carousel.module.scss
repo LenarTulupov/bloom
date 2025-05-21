@@ -1,30 +1,22 @@
-.videoContainer {
-  width: 100vw;
-  height: calc(100vh - var(--header-height));
+.collections-carousel {
   position: relative;
-  overflow: hidden;
-  background-color: var(--primary-color);
 }
-
-.video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; 
-  // opacity: .5;
-  object-position: top;
-}
-
-.text {
+.collections-carousel__info {
   position: absolute;
-  bottom: 120px;
-  left: 170px;
+  bottom: 65px;
   z-index: 10;
-  max-width: 425px;
+  width: 100%;
+  &-inner {
+    display: grid;
+    grid-template-columns: 1fr auto;
+  }
 }
-.title {
+.collections-carousel__text-title {
   margin-bottom: 4px;
+  text-transform: uppercase;
 }
-.descr {
-  margin-bottom: 24px;
-  color: var(--white-color);
+
+.collections-carousel__text-pagination {
+  margin-top: 40px;
 }
+

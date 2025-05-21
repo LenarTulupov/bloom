@@ -2,19 +2,17 @@ import { ICONS } from "@/constants/icons";
 import cn from "classnames";
 import Image from "next/image";
 import { FC, SVGProps } from "react";
-import { usePathname } from "next/navigation";
-import { useAppSelector } from "@/store/hooks";
 import styles from "./icon.module.scss";
 
 interface IIcon {
   name: string;
   color?: "primary" | "white";
-  size?: "sm" | "md" | "lg" | "xl";
+  size?: "xs" | "sm" | "md" | "lg" | "xl";
   className?: string;
-  isHovered?: boolean;
 }
 
 const SIZE_TO_DIMENSIONS = {
+  xs: { width: 16, height: 16 },
   sm: { width: 18, height: 18 },
   md: { width: 20, height: 20 },
   lg: { width: 24, height: 24 },
@@ -25,14 +23,9 @@ export default function Icon({
   name,
   color = "primary",
   size = "lg",
-  className,
+  className = "",
 }: IIcon) {
-  const isScrolled = useAppSelector((state) => state.scrollState.isScrolled);
-  const pathname = usePathname();
   const IconComponent = ICONS[name];
-  const isDropdownOpened = useAppSelector(
-    (state) => state.dropdownState.isDropdownOpened
-  );
 
   if (!IconComponent) {
     console.error(`Icon "${name}" not found`);
@@ -49,13 +42,8 @@ export default function Icon({
         className={cn(
           styles.icon,
           styles[size],
-          pathname === "/" && !isDropdownOpened
-            ? !isScrolled
-              ? styles.white
-              : styles[color]
-            : "",
+          styles[color],
           className,
-          isDropdownOpened ? styles.primary : ""
         )}
         width={dimensions.width}
         height={dimensions.height}
@@ -69,13 +57,8 @@ export default function Icon({
         className={cn(
           styles.icon,
           styles[size],
-          pathname === "/" && !isDropdownOpened
-            ? isScrolled
-              ? styles.white
-              : styles[color]
-            : "",
+          styles[color],
           className,
-          isDropdownOpened ? styles.primary : ""
         )}
       />
     );

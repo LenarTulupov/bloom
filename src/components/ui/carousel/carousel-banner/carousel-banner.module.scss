@@ -1,0 +1,35 @@
+.carousel__banner {
+  position: relative;
+  &-container-image {
+    @extend .container-image;
+  }
+  &-container-video {
+    @extend .container-video;
+  }
+  .container-image {
+    position: relative;
+    width: 100vw;
+    height: calc(100vh - var(--header-height));
+    &__image {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+
+  .container-video {
+    width: 100vw;
+    height: calc(100vh - var(--header-height));
+    position: relative;
+    overflow: hidden;
+    background-color: var(--primary-color);
+    &__video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      // opacity: .5;
+      object-position: top;
+    }
+  }
+}

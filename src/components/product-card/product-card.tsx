@@ -4,7 +4,7 @@ import { IProduct } from "@/types/product.interface";
 import { useState } from "react";
 import Link from "next/link";
 import Icon from "../icon/icon";
-import Button from "../ui/button/button";
+import Button from "../ui/buttons/button/button";
 import styles from "./product-card.module.scss";
 
 export default function ProductCard({ product }: { product: IProduct }) {

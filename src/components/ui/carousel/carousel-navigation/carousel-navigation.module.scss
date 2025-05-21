@@ -1,0 +1,13 @@
+.carousel__navigation-prev {
+  position: absolute;
+  top: 50%;
+  left: 60px;
+  z-index: 15;
+}
+
+.carousel__navigation-next {
+  position: absolute;
+  top: 50%;
+  right: 60px;
+  z-index: 15;
+}
