@@ -14,7 +14,7 @@ export default function CatalogPageClient() {
                 <CatalogCard
                   key={category.id}
                   name={category.category}
-                  link={category.href}
+                  href={category.href}
                 />
               ) : null
             )

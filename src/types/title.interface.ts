@@ -4,10 +4,10 @@ export interface ITitle extends HTMLAttributes<HTMLHeadingElement> {
   title?: string;
   children?: ReactNode;
   className?: string;
-  color?: 'white' | 'black' | 'primary';
-  size?: 'xl' | 'lg' | 'md' | 'sm' | 'xs' | 'xxs';
+  color?: 'white' | 'black';
+  size?: "xl" | "xs" | "sm" | "xxl";
   background?: boolean;
   h?: 1 | 2 | 3 | 4 | 5 | 6;
-  rounded?: boolean;
-  border?: boolean;
+  bold?: boolean;
+  uppercase?: boolean;
 }

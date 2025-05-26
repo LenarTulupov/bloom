@@ -1,38 +1,81 @@
-import CatalogCard from "@/components/catalog-card/catalog-card";
+"use client";
+
 import Container from "@/components/ui/container/container";
-import ProductsGrid from "@/components/ui/products-grid/products-grid";
-import Title from "@/components/ui/title/title";
-import { navItemsLeft } from "@/constants/nav-items";
-import React from "react";
+import React, { useMemo, useRef, useState } from "react";
 import styles from "./catalog-section.module.scss";
-import Link from "next/link";
+import CarouselHeader from "@/components/carousel-header/carousel-header";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import { navItemsLeft } from "@/constants/nav-items";
+import CatalogCard from "@/components/catalog-card/catalog-card";
+import { chunkArray } from "@/utils/chunk-array";
+import type { Swiper as SwiperType } from "swiper";
+import { Navigation } from "swiper/modules";
+
+interface ICategory {
+  id: number;
+  category: string;
+  href: string;
+}
 
 export default function CatalogSection() {
+  const swiperRef = useRef<SwiperType | null>(null);
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const categoryChunks = useMemo(() => {
+    const categories: ICategory[] = navItemsLeft[0]?.categories ?? [];
+    return chunkArray(categories, 5);  
+  }, []);
+
+  const allPages = categoryChunks.length;
+
+  const handleNext = () => {
+    if (!swiperRef.current || currentPage >= allPages) return;
+    swiperRef.current.slideTo(currentPage); 
+    setCurrentPage(p => p + 1);
+  };
+
+  const handlePrev = () => {
+    if (!swiperRef.current || currentPage <= 1) return;
+    swiperRef.current.slideTo(currentPage - 2);
+    setCurrentPage(p => p - 1);
+  };
+
   return (
-    <section>
+    <section className={styles["catalog-section"]}>
       <Container>
         <div className={styles["catalog-section__content"]}>
-          <div className={styles["catalog-section__text"]}>
-            <Title>Catalog</Title>
-            <Link href="/catalog">
-              <Title>View All</Title>
-            </Link>
-          </div>
-          <ProductsGrid>
-            {navItemsLeft.map((item) =>
-              item.categories
-                ?.slice(0, 5)
-                .map((category) =>
-                  category.href ? (
-                    <CatalogCard
-                      key={category.id}
-                      name={category.category}
-                      link={category.href}
-                    />
-                  ) : null
-                )
-            )}
-          </ProductsGrid>
+          <CarouselHeader
+            title="Catalog"
+            uppercase
+            bold
+            size="xs"
+            allPages={allPages}
+            currentPage={currentPage}
+            onNext={handleNext}
+            onPrev={handlePrev}
+          />
+
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={24}
+            modules={[Navigation]}
+            onSwiper={swiper => (swiperRef.current = swiper)}
+            className={styles.swiper}
+          >
+            {categoryChunks.map((chunk, idx) => (
+              <SwiperSlide key={idx} className={styles.slide}>
+                {chunk.map(cat => (
+                  <CatalogCard
+                    key={cat.id}
+                    name={cat.category}
+                    href={cat.href}
+                  />
+                ))}
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </Container>
     </section>

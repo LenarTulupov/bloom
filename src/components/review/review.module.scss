@@ -1,0 +1,47 @@
+.review {
+  padding: 16px;
+  background-color: var(--white-color);
+  &__quotes {
+    position: relative;
+    width: 32px;
+    height: 26px;
+    &-image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__comment {
+    margin-top: 16px;
+  }
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 24px;
+    &-left {
+      @extend .footer-left;
+    }
+    .footer-left {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+      &__avatar {
+        position: relative;
+        width: 36px;
+        height: 36px;
+        &-image {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    &-right {
+      @extend .footer-right;
+    }
+    .footer-right {
+      &__link {
+        display: flex;
+      }
+    }
+  }
+}

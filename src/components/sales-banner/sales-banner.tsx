@@ -9,19 +9,21 @@ interface ISalesBanner {
 
 export default function SalesBanner({ banner }: ISalesBanner) {
   return (
-    <Link href="/catalog/sales">
+    <div className={styles["sales-banner"]}>
       <Container>
-        <div className={styles["sales-banner"]}>
-          <Image
-            className={styles["sales-banner__img"]}
-            alt="spring sales"
-            src={banner}
-            width={1000}
-            height={1000}
-            priority
-          />
-        </div>
+        <Link href="/catalog/sales" className={styles["sales-banner__link"]}>
+          <div className={styles["sales-banner__image-container"]}>
+            <Image
+              className={styles["sales-banner__image"]}
+              alt="spring sales"
+              src={banner}
+              width={1000}
+              height={1000}
+              priority
+            />
+          </div>
+        </Link>
       </Container>
-    </Link>
+    </div>
   );
 }

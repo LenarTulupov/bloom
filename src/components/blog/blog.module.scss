@@ -1,0 +1,27 @@
+.blog {
+  padding: 16px;
+  border: 1px solid #E9E6DD;
+  border-radius: var(--border-radius);
+  background-color: var(--white-color);
+  &__info {
+    margin-top: 24px;
+    &-description {
+      margin-top: 11px;
+      font-weight: 500;
+      opacity: .7;
+    }
+    &-date {
+      margin-top: 30px;
+      font-weight: bold;
+      opacity: .5;
+    }
+  }
+}
+.blog__image-container {
+  position: relative;
+  width: 100%;
+  .blog__image {
+    width: 100%;
+    height: 100%;
+  }
+}

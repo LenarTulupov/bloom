@@ -1,11 +1,21 @@
 .catalog-section {
+  margin-top: 60px;
   &__text {
     display: flex;
     justify-content: space-between;
   }
   &__content {
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
+    // display: flex;
+    // flex-direction: column;
+    // row-gap: 20px;
   }
+}
+
+.slide {
+  display: grid !important;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 24px;
+}
+.swiper {
+  margin-top: 32px;
 }

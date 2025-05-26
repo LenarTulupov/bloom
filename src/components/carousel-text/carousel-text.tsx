@@ -26,10 +26,11 @@ export default function CarouselText({
       <Title
         className={styles["collections-carousel__text-title"]}
         color="white"
+        size="sm"
       >
         {title}
       </Title>
-      <Description>{description}</Description>
+      <Description color="white">{description}</Description>
       <CarouselPagination className={styles["collections-carousel__text-pagination"]}>
         {Array.from({length: slidesLength }).map((_, index) => (
           <CarouselPaginationButton key={index} index={index} onClick={goToSlide}>

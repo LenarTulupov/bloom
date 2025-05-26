@@ -1,0 +1,33 @@
+.why-section {
+  margin-top: 150px;
+  &__content {
+    &-items {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      margin-top: 32px;
+      column-gap: 24px;
+    }
+    &-item {
+      @extend .content-item;
+    }
+    .content-item {
+      position: relative;
+      padding: 8px 16px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        width: 2px;
+        height: 90%;
+        background-color: var(--primary-color);
+        border-radius: 50px;
+        opacity: .2;
+      }
+      &__description {
+        margin-top: 33px;
+      }
+    }
+  }
+}
