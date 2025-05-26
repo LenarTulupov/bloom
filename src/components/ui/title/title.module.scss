@@ -1,9 +1,23 @@
 .title {
-  font-size: 40px;
   font-weight: 700;
   &_bold {
     font-weight: 800;
   }
+  &_uppercase {
+    text-transform: uppercase;
+  }
+}
+.xl {
+  font-size: 16px;
+}
+.xs {
+  font-size: 32px;
+}
+.sm {
+  font-size: 40px;
+}
+.xxl {
+  font-size: 128px;
 }
 
 .white {

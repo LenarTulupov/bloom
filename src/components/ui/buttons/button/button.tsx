@@ -11,6 +11,7 @@ import styles from "./button.module.scss";
 
 type ButtonProps = {
   children: ReactNode;
+  width?: "full" | "fit";
   className?: string;
   color?: "primary";
 } & (
@@ -19,8 +20,8 @@ type ButtonProps = {
 );
 
 const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
-  ({ children, className = "", color = "primary", href, ...props }, ref) => {
-    const buttonClasses = cn(styles.button, styles[color], className);
+  ({ children, className = "", color = "primary", width = "full", href, ...props }, ref) => {
+    const buttonClasses = cn(styles.button, styles[color], styles[width], className);
 
     if (href) {
       return (

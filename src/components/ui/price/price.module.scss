@@ -1,0 +1,13 @@
+.price {
+  display: flex;
+  column-gap: 10px;
+  font-weight: 600;
+  &__new {
+    font-size: 14px;
+  }
+  &__old {
+    font-size: 13px;
+    opacity: .3;
+    text-decoration: line-through;
+  }
+}

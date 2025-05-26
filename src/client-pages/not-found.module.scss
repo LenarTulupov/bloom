@@ -1,0 +1,29 @@
+.not-found {
+  overflow: hidden;
+  &__background {
+    position: relative;
+    width: 100vw;
+    height: calc(100vh - var(--top-header-height));
+    &-image {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  &__text {
+    position: absolute;
+    bottom: 117px;
+    width: 100%;
+    &-title {
+      // text-shadow: 10px 7px 3px #fff;
+      text-shadow: #fff 5px 5px 0px;
+    }
+    &-subtitle {
+      opacity: .7;
+      margin-bottom: 55px;
+    }
+    &-button {
+      padding: 16px 77px !important;
+    }
+  }
+}

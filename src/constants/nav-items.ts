@@ -8,6 +8,7 @@ export const navItemsLeft = [
     {
       id: 2,
       category: "dresses",
+      href: "catalog/dresses",  
       categoryItems: [
         {
           id: 1,
@@ -44,6 +45,7 @@ export const navItemsLeft = [
     {
       id: 3,
       category: "tops",
+      href: "catalog/tops",
       categoryItems: [
         {
           id: 1,
@@ -70,6 +72,7 @@ export const navItemsLeft = [
     {
       id: 4,
       category: "Bottoms",
+      href: "catalog/bottoms",
       categoryItems: [
         {
           id: 1,
@@ -91,6 +94,7 @@ export const navItemsLeft = [
     {
       id: 5,
       category: "Outerwear",
+      href: "catalog/outerwear",
       categoryItems: [
         {
           id: 1,
@@ -112,6 +116,7 @@ export const navItemsLeft = [
     {
       id: 6,
       category: "Accessories",
+      href: "catalog/accessories",
       categoryItems: [
         {
           id: 1,

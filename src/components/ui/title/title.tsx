@@ -1,30 +1,30 @@
-import { ReactNode } from "react";
-import styles from "./title.module.scss";
 import cn from "classnames";
-
-interface ITitle {
-  children: ReactNode;
-  bold?: boolean;
-  className?: string;
-  color?: "white" | "black";
-}
+import { ITitle } from "@/types/title.interface";
+import styles from "./title.module.scss";
+import { ElementType } from "react";
 
 export default function Title({
   children,
   bold = false,
-  className,
+  className = "",
   color = "black",
+  size = "sm",
+  uppercase = false,
+  h = 2
 }: ITitle) {
+  const HeadingTag: ElementType = `h${h}`;
   return (
-    <div
+    <HeadingTag
       className={cn(
         styles.title,
         styles[color],
         { [styles.title_bold]: bold },
-        className || ""
+        styles[size],
+        {[ styles.title_uppercase]: uppercase },
+        className
       )}
     >
       {children}
-    </div>
+    </HeadingTag>
   );
 }

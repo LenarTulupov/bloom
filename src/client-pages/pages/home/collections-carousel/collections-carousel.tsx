@@ -4,7 +4,6 @@ import Carousel from "@/components/ui/carousel/carousel";
 import CarouselSlide from "@/components/ui/carousel/carousel-slide/carousel-slide";
 import CarouselBanner from "@/components/ui/carousel/carousel-banner/carousel-banner";
 import TransparentButton from "@/components/ui/buttons/transparent-button/transparent-button";
-import CarouselNavigation from "@/components/ui/carousel/carousel-navigation/carousel-navigation";
 import CarouselInfo from "@/components/ui/carousel/carousel-info/carousel-info";
 import { slides } from "@/constants/carousel-slides";
 import { useEffect, useRef, useState } from "react";
@@ -16,6 +15,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import styles from "./collections-carousel.module.scss";
+import CarouselControls from "@/components/ui/carousel/carousel-controls/carousel-controls";
 
 export default function CollectionsCarousel() {
   const swiperRef = useRef<SwiperType | null>(null);
@@ -112,7 +112,7 @@ export default function CollectionsCarousel() {
             </CarouselSlide>
           </SwiperSlide>
         ))}
-        <CarouselNavigation onNext={handleNext} onPrev={handlePrev}/>
+        <CarouselControls onNext={handleNext} onPrev={handlePrev}/>
       </Carousel>
     </section>
   );

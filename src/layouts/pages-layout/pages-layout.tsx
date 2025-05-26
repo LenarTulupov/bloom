@@ -9,13 +9,14 @@ import NavigationMenu from "@/components/navigation-menu/navigation-menu";
 import { navItemsLeft } from "@/constants/nav-items";
 import Footer from "@/components/footer/footer";
 import styles from "./pages-layout.module.scss";
-import cn from 'classnames';
+import cn from "classnames";
 
 interface IPagesLayout {
   children: ReactNode;
+  footer?: boolean;
 }
 
-export default function LayoutsPagesLayout({ children }: IPagesLayout) {
+export default function LayoutsPagesLayout({ children, footer = true }: IPagesLayout) {
   const pathname = usePathname();
   const { isHamburgerOpened } = useHamburger();
 
@@ -24,21 +25,21 @@ export default function LayoutsPagesLayout({ children }: IPagesLayout) {
   }, [pathname]);
   return (
     <>
-      <>
-        <Header />
-          <main className={cn(
-            styles.children, 
-            pathname === "/" ? styles.children_home : ""
-          )}>
-            {children}
-          </main>
+      <Header />
+      <main
+        className={cn(
+          styles.children,
+          pathname === "/" || "/not-found" ? styles.children_home : ""
+        )}
+      >
+        {children}
+      </main>
+      {footer ? (
         <Footer />
-      </>
-      <>
-        <Sidebar isOpened={isHamburgerOpened}>
-          <NavigationMenu column items={navItemsLeft}/>
-        </Sidebar>
-      </>
+      ) : null }
+      <Sidebar isOpened={isHamburgerOpened}>
+        <NavigationMenu column items={navItemsLeft} />
+      </Sidebar>
     </>
   );
 }

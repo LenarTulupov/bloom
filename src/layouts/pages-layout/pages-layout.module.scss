@@ -1,6 +1,6 @@
 .children {
   padding-top: var(--header-height);
-  min-height: calc(100vh - var(--header-height) - var(--footer-height));
+  min-height: calc(100vh - var(--footer-height));
   &_home {
     padding-top: var(--top-header-height);
   }
