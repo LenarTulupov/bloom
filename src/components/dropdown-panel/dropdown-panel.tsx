@@ -22,10 +22,10 @@ export default function DropdownPanel({
 
   return createPortal(
     <div className={styles["dropdown-panel"]}>
-      <Divider />
       <Container>
         <DropdownPanelList item={item} activeCategory={activeCategory} />
       </Container>
+      <Divider />
     </div>,
     dropdownRoot
   );

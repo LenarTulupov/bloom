@@ -7,9 +7,9 @@ interface INavigation {
   className?: string;
 }
 
-export function Navigation({ children, className }: INavigation) {
+export function Navigation({ children, className = "" }: INavigation) {
   return (
-    <nav className={cn(styles.navigation, className || "")}>
+    <nav className={cn(styles.navigation, className)}>
       { children }
     </nav>
   );

@@ -1,6 +1,8 @@
 .review {
   padding: 16px;
   background-color: var(--white-color);
+  border: 1px solid #E9E6DD;
+  border-radius: var(--border-radius);
   &__quotes {
     position: relative;
     width: 32px;
