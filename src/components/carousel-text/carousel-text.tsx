@@ -26,7 +26,7 @@ export default function CarouselText({
       <Title
         className={styles["collections-carousel__text-title"]}
         color="white"
-        size="sm"
+        size="lg"
       >
         {title}
       </Title>

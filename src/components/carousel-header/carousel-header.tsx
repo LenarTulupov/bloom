@@ -7,7 +7,6 @@ interface ICarouselHeader {
   title: string;
   uppercase?: boolean;
   bold?: boolean;
-  size?: "xs" | "sm" | "xxl";
   allPages?: number;
   currentPage?: number;
   onNext?: () => void;
@@ -18,14 +17,13 @@ export default function CarouselHeader({
   title, 
   uppercase = true, 
   bold = true, 
-  size = "xs", 
   allPages,
   currentPage, 
   onNext, 
   onPrev }: ICarouselHeader) {
   return (
     <header className={styles["carousel-header"]}>
-      <Title size={size} bold={bold} uppercase={uppercase}>{title}</Title>
+      <Title bold={bold} uppercase={uppercase}>{title}</Title>
       <div
         className={`${styles["catalog-section__top-inner"]} ${styles["top-inner"]}`}
       >

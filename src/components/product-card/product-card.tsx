@@ -4,10 +4,10 @@ import { useState } from "react";
 import Link from "next/link";
 import Icon from "../icon/icon";
 import Button from "../ui/buttons/button/button";
-import styles from "./product-card.module.scss";
 import ColorIndicator from "../ui/color-indicator/color-indicator";
-import Title from "../ui/title/title";
 import Price from "../ui/price/price";
+import styles from "./product-card.module.scss";
+import ItemTitle from "../ui/item-title/item-title";
 
 export default function ProductCard({ product }: { product: IProduct }) {
   const { title, thumbnail, price_new, price_old, color } = product;
@@ -44,7 +44,7 @@ export default function ProductCard({ product }: { product: IProduct }) {
           <Icon name="favorite" className={styles["product-card__favorite"]} />
         </div>
         <div className={styles["product-card__info"]}>
-          <Title size="xl" className={styles["product-card__info-title"]}>{title}</Title>
+          <ItemTitle className={styles["product-card__info-title"]}>{title}</ItemTitle>
           <Price 
             className={styles["product-card__info-price"]}
             price_new={price_new} 

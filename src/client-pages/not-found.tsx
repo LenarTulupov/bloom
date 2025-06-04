@@ -21,7 +21,7 @@ export default function NotFound() {
         <Container>
           <Title 
             bold 
-            size="xxl" 
+            size="xl" 
             uppercase 
             className={styles["not-found__text-title"]}
           >

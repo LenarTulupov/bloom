@@ -50,7 +50,6 @@ export default function CatalogSection() {
             title="Catalog"
             uppercase
             bold
-            size="xs"
             allPages={allPages}
             currentPage={currentPage}
             onNext={handleNext}

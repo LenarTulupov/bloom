@@ -1,8 +1,8 @@
 import Image from "next/image";
-import Title from "../ui/title/title";
 import Description from "../ui/description/description";
-import styles from "./blog.module.scss";
 import Link from "next/link";
+import ItemTitle from "../ui/item-title/item-title";
+import styles from "./blog.module.scss";
 
 interface IBlog {
   src: string;
@@ -26,9 +26,7 @@ export default function Blog({ src, title, description, date }: IBlog) {
           />
         </div>
         <div className={styles.blog__info}>
-          <Title size="sm" uppercase>
-            {title}
-          </Title>
+          <ItemTitle size="sm">{title}</ItemTitle>
           <Description className={styles["blog__info-description"]}>
             {description}
           </Description>

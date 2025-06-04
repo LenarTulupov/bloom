@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./catalog-card.module.scss";
 import Link from "next/link";
+import ItemTitle from "../ui/item-title/item-title";
 
 interface ICatalogCard {
   name: string;
@@ -8,12 +9,11 @@ interface ICatalogCard {
 }
 
 export default function CatalogCard({ name, href }: ICatalogCard) {
-  console.log(href)
   return (
     <article className={styles["catalog-card"]}>
       <Link href={href}>
         <div className={styles["catalog-card__content"]}>
-          <div className={styles['catalog-card__title']}>{name}</div>
+          <ItemTitle>{name}</ItemTitle>
           <div className={styles["catalog-card__img-wrapper"]}>
             <Image
               className={styles["catalog-card__img"]}

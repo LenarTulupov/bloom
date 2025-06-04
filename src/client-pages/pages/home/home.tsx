@@ -9,14 +9,13 @@ import ReviewsSection from "./reviews-section/reviews-section";
 import WhySection from "./why-section/why-section";
 
 export default function Home() {
-  const banner = '/sales-banners/banner.jpg'
   return (
     <div className={styles.home}>
       <CollectionsCarousel/>
       <CatalogSection/>
       <NewInSection/>
       <TrendingSection/>  
-      <SalesBanner banner={banner}/>
+      <SalesBanner/>
       <BlogSection/>
       <ReviewsSection/>
       <WhySection/>

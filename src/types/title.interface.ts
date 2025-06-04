@@ -5,7 +5,7 @@ export interface ITitle extends HTMLAttributes<HTMLHeadingElement> {
   children?: ReactNode;
   className?: string;
   color?: 'white' | 'black';
-  size?: "xl" | "xs" | "sm" | "xxl";
+  size?: "xs" | "sm" | "md" | "lg" | "xl";
   background?: boolean;
   h?: 1 | 2 | 3 | 4 | 5 | 6;
   bold?: boolean;

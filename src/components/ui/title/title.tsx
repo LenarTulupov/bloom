@@ -8,7 +8,7 @@ export default function Title({
   bold = false,
   className = "",
   color = "black",
-  size = "sm",
+  size = "md",
   uppercase = false,
   h = 2
 }: ITitle) {
