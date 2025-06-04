@@ -1,12 +1,12 @@
 .catalog-card {
-  background-color: rgba(var(--gray-color-rgba), .1);
+  // background-color: rgba(var(--gray-color-rgba), .1);
   height: 106px;
   border-radius: var(--border-radius);
-  border: 1px solid var(--gray-color);
+  border: 1px solid #E9E6DD;
   overflow: hidden;
   transition: transform .1s ease-in-out, background-color .3s ease-in-out;
   &:hover {
-    background-color: rgb(244, 244, 244);
+    // background-color: rgb(244, 244, 244);
     .catalog-card__img-wrapper {
       transform: scale(1.1);
     }
