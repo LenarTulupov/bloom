@@ -6,6 +6,7 @@ import TrendingSection from "./trending-section/trending-section";
 import BlogSection from "./blog-section/blog-section";
 import ReviewsSection from "./reviews-section/reviews-section";
 import WhySection from "./why-section/why-section";
+import InstagramSection from "./instagram-section/instagram-section";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <SalesBanner/>
       <BlogSection/>
       <ReviewsSection/>
+      <InstagramSection/>
       <WhySection/>
     </>
   );

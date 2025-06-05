@@ -1,0 +1,19 @@
+.instagram-section {
+  margin-top: 150px;
+  &__content {
+    &-images {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      column-gap: 24px;
+
+    }
+  }
+}
+.instagram-section__content-wrapper {
+  position: relative;
+}
+.instagram-section__content-image {
+  width: 100%;
+  height: 100%;
+}
