@@ -41,6 +41,8 @@ export default function ReviewsSection() {
               pages={pages}
               onNext={handleNext}
               onPrev={handlePrev}
+              isNextDisabled={currentPage === pages}
+              isPrevDisabled={currentPage === 1}
             />
           </div>
           <ReviewCarousel reviews={reviews} swiperRef={swiperRef}/>

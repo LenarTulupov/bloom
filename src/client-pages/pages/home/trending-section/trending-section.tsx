@@ -51,6 +51,8 @@ export default function TrendingSection() {
           pages={pages}
           onNext={handleNext}
           onPrev={handlePrev}
+          isNextDisabled={currentPage === pages}
+          isPrevDisabled={currentPage === 1}
         />
          <Swiper
             slidesPerView={4}

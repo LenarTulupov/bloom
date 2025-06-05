@@ -7,13 +7,15 @@ interface ICarouselHeaderControls {
   currentPage: number;
   onNext: () => void;
   onPrev: () => void; 
+  isNextDisabled: boolean;
+  isPrevDisabled: boolean;
 }
 
-export default function CarouselHeaderControls({ currentPage, pages, onNext, onPrev }: ICarouselHeaderControls) {
+export default function CarouselHeaderControls({ currentPage, pages, onNext, onPrev, isNextDisabled, isPrevDisabled }: ICarouselHeaderControls) {
   return (
     <div className={styles["carousel-header-controls"]}>
       <PageIndicator currentPage={currentPage} pages={pages} />
-      <CarouselControls onNext={onNext} onPrev={onPrev} />
+      <CarouselControls onNext={onNext} onPrev={onPrev} isPrevDisabled={isPrevDisabled} isNextDisabled={isNextDisabled} />
     </div>
   );
 }

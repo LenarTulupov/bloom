@@ -10,6 +10,8 @@ interface ICarouselHeader {
   currentPage: number;
   onNext: () => void;
   onPrev: () => void; 
+  isNextDisabled: boolean;
+  isPrevDisabled: boolean;
 }
 
 export default function CarouselHeader({ 
@@ -19,11 +21,20 @@ export default function CarouselHeader({
   pages,
   currentPage, 
   onNext, 
-  onPrev }: ICarouselHeader) {
+  onPrev,
+  isNextDisabled,
+  isPrevDisabled }: ICarouselHeader) {
   return (
     <header className={styles["carousel-header"]}>
       <Title bold={bold} uppercase={uppercase}>{title}</Title>
-      <CarouselHeaderControls pages={pages} currentPage={currentPage} onNext={onNext} onPrev={onPrev}/>
+      <CarouselHeaderControls 
+        pages={pages} 
+        currentPage={currentPage} 
+        onNext={onNext} 
+        onPrev={onPrev}
+        isNextDisabled={isNextDisabled}
+        isPrevDisabled={isPrevDisabled}
+      />
     </header>
   );
 }

@@ -54,6 +54,8 @@ export default function CatalogSection() {
             currentPage={currentPage}
             onNext={handleNext}
             onPrev={handlePrev}
+            isNextDisabled={currentPage === allPages}
+            isPrevDisabled={currentPage === 1}
           />
 
           <Swiper

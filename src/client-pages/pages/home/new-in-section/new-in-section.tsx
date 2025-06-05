@@ -52,6 +52,8 @@ export default function NewInSection() {
             pages={pages}
             onNext={handleNext}
             onPrev={handlePrev}
+            isNextDisabled={currentPage === pages}
+            isPrevDisabled={currentPage === 1}
           />
           <Swiper
             slidesPerView={4}

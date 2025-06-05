@@ -1,4 +1,7 @@
 .carousel-controls {
   display: flex;
   column-gap: 16px;
+  &__button {
+    background-color: #E9E3DD;
+  }
 }

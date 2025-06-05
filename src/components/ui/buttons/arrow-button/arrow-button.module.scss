@@ -7,6 +7,10 @@
   border: none;
   border-radius: 100%;
   cursor: pointer;
+  &:disabled {
+    opacity: .3;
+    cursor: not-allowed;
+  }
 }
 
 .left {
