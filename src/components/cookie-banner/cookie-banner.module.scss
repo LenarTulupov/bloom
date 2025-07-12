@@ -1,0 +1,24 @@
+.cookie-banner {
+  position: fixed;
+  bottom: 0; 
+  background-color: var(--background);
+  z-index: 10;
+  width: 100%;
+  padding: 10px 0;
+  border-top: 1px solid #E9E6DD;
+  &__content {
+    display: flex;
+    column-gap: 50px;
+    align-items: center;
+    &-description {
+      font-size: 14px;
+    }
+  }
+  &__buttons {
+    display: flex;
+    column-gap: 10px;
+    &-size {
+      font-size: 13px !important;
+    }
+  }
+}

@@ -9,7 +9,7 @@ interface ITransparentButton {
 
 export default function TransparentButton({ text, href }: ITransparentButton) {
   return (
-  <Button className={styles["transparent-button"]} href={href}>
+  <Button className={styles["transparent-button"]} href={href} weight="bold">
     {text}
   </Button>
   )

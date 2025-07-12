@@ -5,9 +5,11 @@ import { useAppSelector } from "@/store/hooks";
 
 interface ILogo {
   color?: "black" | "white";
+  width?: number;
+  height?: number;
 }
 
-export default function Logo({ color = "black" }: ILogo) {
+export default function Logo({ color = "black", width = 90, height = 43 }: ILogo) {
   const pathname = usePathname();
   const isDropdownOpened = useAppSelector(store => store.dropdownState.isDropdownOpened);
   const isScrolled = useAppSelector(state => state.scrollState.isScrolled);
@@ -19,8 +21,8 @@ export default function Logo({ color = "black" }: ILogo) {
           styles[color],
           isDropdownOpened ? styles.black : ""
         )}
-        width="90"
-        height="43"
+        width={width}
+        height={height}
         viewBox="0 0 90 43"
         xmlns="http://www.w3.org/2000/svg"
       >

@@ -13,15 +13,18 @@ type ButtonProps = {
   children: ReactNode;
   width?: "full" | "fit";
   className?: string;
-  color?: "primary";
+  color?: "primary" | "secondary";
+  font?: "xs" | "sm";
+  weight?: "semi" | "bold";
+  uppercase?: boolean;
 } & (
   | ({ href: string } & AnchorHTMLAttributes<HTMLAnchorElement>)
   | (ButtonHTMLAttributes<HTMLButtonElement> & { href?: undefined })
 );
 
 const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
-  ({ children, className = "", color = "primary", width = "full", href, ...props }, ref) => {
-    const buttonClasses = cn(styles.button, styles[color], styles[width], className);
+  ({ children, className = "", color = "primary", width = "full", font = "sm", weight = "sm", href, uppercase = true, ...props }, ref) => {
+    const buttonClasses = cn(styles.button, styles[color], styles[width], styles[font], styles[weight], {[styles.uppercase]: uppercase}, className);
 
     if (href) {
       return (

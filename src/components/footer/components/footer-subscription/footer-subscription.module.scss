@@ -1,0 +1,33 @@
+.footer-subscription {
+  &__title {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  &__description {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  &__form {
+    display: flex;
+    margin-top: 16px;
+    column-gap: 8px;
+    &-button {
+      padding: 11px 28px !important;
+    }
+    &-input {
+      flex: 1;
+      padding: 11px 16px;
+      border: 1px solid #E9E6DD;
+      border-radius: 4px;
+      &:focus {
+        border: 1px solid #d5d2c9;
+        outline: none;
+      }
+    }
+  }
+  &__note {
+    margin-top: 8px;
+    font-size: 10px;
+    color: #797878;
+  }
+}
