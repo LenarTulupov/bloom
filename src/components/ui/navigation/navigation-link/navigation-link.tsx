@@ -8,7 +8,8 @@ import styles from "./navigation-link.module.scss";
 export function NavigationLink({ 
   link, 
   column, 
-  icon = false}: INavigationLink) {
+  icon = false,
+  counter }: INavigationLink) {
   const { href, name, categories } = link;
   const pathname = usePathname();
   const hasDropdown = Boolean(categories && categories.length > 0);
@@ -25,6 +26,7 @@ export function NavigationLink({
         name={name} 
         hasDropdown={hasDropdown} 
         icon={icon}
+        counter={counter}
       />
     </Link>
   );

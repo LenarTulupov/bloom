@@ -8,10 +8,13 @@ import ColorIndicator from "../ui/color-indicator/color-indicator";
 import Price from "../ui/price/price";
 import styles from "./product-card.module.scss";
 import ItemTitle from "../ui/item-title/item-title";
+import { useAppDispatch } from "@/store/hooks";
+import { addToFavorites } from "@/store/features/favorite-slice";
 
 export default function ProductCard({ product }: { product: IProduct }) {
   const { title, thumbnail, price_new, price_old, color } = product;
   const [showQuickView, setShowQuickView] = useState<boolean>(false);
+  const dispatch = useAppDispatch();
 
   const onMouseEnter = () => {
     setShowQuickView(true);
@@ -20,6 +23,11 @@ export default function ProductCard({ product }: { product: IProduct }) {
   const onMouseLeave = () => {
     setShowQuickView(false);
   };
+
+  const handleFavorite = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    dispatch(addToFavorites(product));
+  }
   return (
     <article
       className={styles["product-card"]}
@@ -41,16 +49,25 @@ export default function ProductCard({ product }: { product: IProduct }) {
               Quick View
             </Button>
           )}
-          <Icon name="favorite" className={styles["product-card__favorite"]} />
+          <button onClick={handleFavorite} className={styles['product-card__favorite']}>
+            <Icon
+              name="favorite"
+            />
+          </button>
         </div>
         <div className={styles["product-card__info"]}>
-          <ItemTitle className={styles["product-card__info-title"]}>{title}</ItemTitle>
-          <Price 
+          <ItemTitle className={styles["product-card__info-title"]}>
+            {title}
+          </ItemTitle>
+          <Price
             className={styles["product-card__info-price"]}
-            price_new={price_new} 
-            price_old={price_old} 
+            price_new={price_new}
+            price_old={price_old}
           />
-          <ColorIndicator color={color} className={styles["product-card__info-color"]}/>
+          <ColorIndicator
+            color={color}
+            className={styles["product-card__info-color"]}
+          />
         </div>
       </Link>
     </article>

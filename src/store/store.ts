@@ -3,6 +3,7 @@ import hamburgerReducer from './features/hamburger-slice'
 import productsReducer from './features/products-slice'
 import dropdownStateReducer from './features/dropdown-slice'
 import scrollStateReducer from './features/scroll-slice'
+import favoritesStateReducer from './features/favorite-slice'
 
 export const store = configureStore({
   reducer: {
@@ -10,6 +11,7 @@ export const store = configureStore({
     products: productsReducer,
     dropdownState: dropdownStateReducer,
     scrollState: scrollStateReducer,
+    favoritesState: favoritesStateReducer,
   }
 });
 

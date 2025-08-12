@@ -9,38 +9,48 @@ interface INavigationLinkText {
   name: string;
   hasDropdown: boolean;
   icon?: boolean;
+  counter?: number;
 }
 
 export default function NavigationLinkText({
   name,
   hasDropdown,
   icon = false,
+  counter
 }: INavigationLinkText) {
   const upperName = name.slice(0, 1).toUpperCase() + name.slice(1);
-  const isDropdownOpened = useAppSelector((state) => state.dropdownState.isDropdownOpened);
+  const isDropdownOpened = useAppSelector(
+    (state) => state.dropdownState.isDropdownOpened
+  );
   const isScrolled = useAppSelector((state) => state.scrollState.isScrolled);
   const pathname = usePathname();
 
-  const arrowColor = pathname === "/" 
-    ? (isDropdownOpened || isScrolled) ? "primary" : "white" 
-    : "primary";
+  console.log(counter)
+
+  const arrowColor =
+    pathname === "/"
+      ? isDropdownOpened || isScrolled
+        ? "primary"
+        : "white"
+      : "primary";
   return (
     <div className={styles["navigation__link-text"]}>
-      {!icon 
-        ? upperName 
-        : ICONS[name] 
-          ? <Icon 
-            name={name} 
-            color={pathname === "/" 
-              ? isScrolled ? "primary" : "white" 
-              : "primary"}/> 
-            : null}
+      {!icon ? (
+        upperName
+      ) : ICONS[name] ? (
+        <Icon
+          name={name}
+          color={
+            pathname === "/" ? (isScrolled ? "primary" : "white") : "primary"
+          }
+        />
+      ) : null}
+      {(name === "favorite" || name === "cart") && counter !== undefined && counter >= 0 && (
+        <span className={styles["navigation__link-counter"]}>{counter}</span>
+      )}
       {/* dropdown arrow */}
       {hasDropdown && (
-        <ArrowIcon 
-          isHovered={isDropdownOpened} 
-          color={arrowColor}
-        />
+        <ArrowIcon isHovered={isDropdownOpened} color={arrowColor} />
       )}
     </div>
   );

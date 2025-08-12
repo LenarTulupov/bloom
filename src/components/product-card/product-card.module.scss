@@ -40,5 +40,11 @@
     position: absolute;
     top: 15px;
     right: 15px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    cursor: pointer;
   }
 }

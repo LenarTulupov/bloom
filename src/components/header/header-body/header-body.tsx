@@ -16,6 +16,7 @@ export default function HeaderBody() {
   const dispatch = useAppDispatch();
   const pathname = usePathname();
   const isDropdownOpened = useAppSelector(state => state.dropdownState.isDropdownOpened);
+  const favoritesCounter = useAppSelector(state => state.favoritesState.counter)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -60,6 +61,9 @@ export default function HeaderBody() {
             )}
             items={navItemsRight}
             icon
+            counters={{
+              favorites: favoritesCounter
+            }}
           />
         </div>
       </Container>

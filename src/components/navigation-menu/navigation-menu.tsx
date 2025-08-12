@@ -12,7 +12,8 @@ export default function NavigationMenu({
   className, 
   column = false, 
   items, 
-  icon = false }: INavigationMenu) {
+  icon = false,
+  counters }: INavigationMenu) {
   return (
     <div className={cn(styles['navigation-menu'], className)}>
       <Navigation>
@@ -27,6 +28,7 @@ export default function NavigationMenu({
                 link={item} 
                 column={column} 
                 icon={icon} 
+                counter={item.key ? counters?.[item.key] : undefined}
               />
             </NavigationItem>
           ))}
