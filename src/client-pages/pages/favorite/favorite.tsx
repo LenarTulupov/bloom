@@ -1,7 +1,7 @@
 export default function Favorite() {
   return (
     <div>
-      Favorites
+      Favorites2
     </div>
   )
 }

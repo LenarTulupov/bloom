@@ -1,15 +1,11 @@
+import { IFavorites } from "@/types/favorites.interface";
 import { IProduct } from "@/types/product.interface";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-interface IFavorites {
-  favorites: IProduct[];
-  counter: number;
-}
-
 const initialState: IFavorites = {
   favorites: [],
-  counter: 0
-}
+  counter: 0,
+};
 
 const favoritesSlice = createSlice({
   name: "favoritesState",
@@ -17,13 +13,23 @@ const favoritesSlice = createSlice({
   reducers: {
     addToFavorites: (state, action: PayloadAction<IProduct>) => {
       const product = action.payload;
-      if(!state.favorites.some((item) => item.id === product.id)) {
+      const isFavorite = state.favorites.some((item) => item.id === product.id);
+
+      if (!isFavorite) {
         state.favorites.push(product);
-        state.counter = state.favorites.length;
+      } else {
+        state.favorites = state.favorites.filter(
+          (item) => item.id !== product.id
+        );
       }
+      state.counter = state.favorites.length;
     },
-  }
+  },
 });
 
 export const { addToFavorites } = favoritesSlice.actions;
 export default favoritesSlice.reducer;
+
+export const isProductInFavorites = (state: {favoritesState: IFavorites}, productId: number) => {
+  return state.favoritesState.favorites.some((item) => item.id === productId);
+}

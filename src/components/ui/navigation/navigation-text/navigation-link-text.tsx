@@ -25,8 +25,6 @@ export default function NavigationLinkText({
   const isScrolled = useAppSelector((state) => state.scrollState.isScrolled);
   const pathname = usePathname();
 
-  console.log(counter)
-
   const arrowColor =
     pathname === "/"
       ? isDropdownOpened || isScrolled
