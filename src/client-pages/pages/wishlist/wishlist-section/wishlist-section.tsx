@@ -7,6 +7,7 @@ import ProductCard from "@/components/product-card/product-card";
 import { useAppSelector } from "@/store/hooks";
 import styles from "./wishlist-section.module.scss";
 import { IWishlist } from "@/types/wishlist.interface";
+import EmptyMessage from "@/components/ui/empty-message/empty-message";
 
 export default function WishlistSection() {
   const wishlist = useAppSelector(
@@ -19,7 +20,7 @@ export default function WishlistSection() {
         <div className={styles["wishlist-section__content"]}>
           <Title uppercase>Wishlist</Title>
           {wishlist.length === 0 ? (
-            <p>Вы пока что не добавили продукты в желаемое</p>
+            <EmptyMessage>Your wishlist is empty.</EmptyMessage>
           ) : (
             <ProductsGrid>
               {wishlist.map((product) => (
