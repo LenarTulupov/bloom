@@ -16,7 +16,7 @@ export default function HeaderBody() {
   const dispatch = useAppDispatch();
   const pathname = usePathname();
   const isDropdownOpened = useAppSelector(state => state.dropdownState.isDropdownOpened);
-  const favoritesCounter = useAppSelector(state => state.favoritesState.counter)
+  const wishlistCounter = useAppSelector(state => state.wishlistState.counter);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -62,7 +62,7 @@ export default function HeaderBody() {
             items={navItemsRight}
             icon
             counters={{
-              favorites: favoritesCounter
+              wishlist: wishlistCounter
             }}
           />
         </div>

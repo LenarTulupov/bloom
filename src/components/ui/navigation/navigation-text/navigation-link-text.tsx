@@ -43,7 +43,7 @@ export default function NavigationLinkText({
           }
         />
       ) : null}
-      {(name === "favorite" || name === "cart") && counter !== undefined && counter >= 0 && (
+      {(name === "wishlist" || name === "cart") && counter !== undefined && counter >= 0 && (
         <span className={styles["navigation__link-counter"]}>{counter}</span>
       )}
       {/* dropdown arrow */}

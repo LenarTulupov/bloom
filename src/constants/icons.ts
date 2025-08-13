@@ -1,8 +1,8 @@
 import { FC, SVGProps } from 'react';
 
 export const ICONS: Record<string, FC<SVGProps<SVGSVGElement>> | string> = {
-  favorite: '/icons/heart.svg',
-  favoriteActive: '/icons/heart-active.svg',
+  wishlist: '/icons/heart.svg',
+  wishlistActive: '/icons/heart-active.svg',
   search: '/icons/search.svg',
   login: '/icons/user.svg',
   cart: '/icons/cart.svg',

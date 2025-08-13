@@ -10,17 +10,17 @@ import styles from "./product-card.module.scss";
 import ItemTitle from "../ui/item-title/item-title";
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import {
-  addToFavorites,
-  isProductInFavorites,
-} from "@/store/features/favorite-slice";
-import { IFavorites } from "@/types/favorites.interface";
+  addToWishlist,
+  isProductInWishlist,
+} from "@/store/features/wishlist-slice";
+import { IWishlist } from "@/types/wishlist.interface";
 
 export default function ProductCard({ product }: { product: IProduct }) {
   const { title, thumbnail, price_new, price_old, color } = product;
   const [showQuickView, setShowQuickView] = useState<boolean>(false);
   const dispatch = useAppDispatch();
-  const isFavorites = useAppSelector((state: { favoritesState: IFavorites }) =>
-    isProductInFavorites(state, product.id)
+  const isInWishlist = useAppSelector((state: { wishlistState: IWishlist }) =>
+    isProductInWishlist(state, product.id)
   );
 
   const onMouseEnter = () => {
@@ -33,7 +33,7 @@ export default function ProductCard({ product }: { product: IProduct }) {
 
   const handleFavorite = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    dispatch(addToFavorites(product));
+    dispatch(addToWishlist(product));
   };
   return (
     <article
@@ -60,7 +60,7 @@ export default function ProductCard({ product }: { product: IProduct }) {
             onClick={handleFavorite}
             className={styles["product-card__favorite"]}
           >
-            {isFavorites ? <Icon name="favoriteActive" /> : <Icon name="favorite" />}
+            {isInWishlist ? <Icon name="wishlistActive" /> : <Icon name="wishlist" />}
           </button>
         </div>
         <div className={styles["product-card__info"]}>

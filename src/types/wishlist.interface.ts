@@ -1,6 +1,6 @@
 import { IProduct } from "./product.interface";
 
-export interface IFavorites {
-  favorites: IProduct[];
+export interface IWishlist {
+  wishlist: IProduct[];
   counter: number;
 }

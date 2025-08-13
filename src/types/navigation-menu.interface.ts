@@ -5,7 +5,7 @@ export interface INavigationMenu {
     id: number;
     href: string;
     name: string;
-    key?: "favorites" | "cart";
+    key?: "wishlist" | "cart";
     categories?: {
       id: number;
       href?: string;
@@ -21,7 +21,7 @@ export interface INavigationMenu {
   isScrolled?: boolean;
   isDropdownOpened?: boolean;
   counters?: {
-    favorites?: number;
+    wishlist?: number;
     cart?: number;
   };
 }

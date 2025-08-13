@@ -43,7 +43,7 @@ export default function LayoutsPagesLayout({ children, footer = true }: IPagesLa
       <main
         className={cn(
           styles.children,
-          pathname === "/" || "/not-found" ? styles.children_home : ""
+          pathname === "/" || pathname === "/not-found" ? styles.children_home : ""
         )}
       >
         {children}

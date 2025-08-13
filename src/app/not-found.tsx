@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function NotFoundPage() {
   return (
-    <PagesLayout footer={false}>
+    <PagesLayout footer={false} isNotFound={true}>
       <NotFound />
     </PagesLayout>
   );

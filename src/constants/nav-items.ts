@@ -144,6 +144,6 @@ export const navItemsLeft = [
 export const navItemsRight = [
   { id: 1, href: "/search", name: "search"},
   { id: 2, href: "/login", name: "login" },
-  { id: 3, key: "favorites" as const, href: "/favorite", name: "favorite"},
+  { id: 3, key: "wishlist" as const, href: "/wishlist", name: "wishlist"},
   { id: 4, key: "cart" as const, href: "/cart", name: "cart"},
 ];

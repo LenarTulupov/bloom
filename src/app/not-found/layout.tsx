@@ -1,3 +1,4 @@
+import LayoutsPagesLayout from "@/layouts/pages-layout/pages-layout";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -11,8 +12,8 @@ export default function NotFoundLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="not-found-layout">
+    <LayoutsPagesLayout footer={false}>
       {children}
-    </div>
+    </LayoutsPagesLayout>
   );
 } 
