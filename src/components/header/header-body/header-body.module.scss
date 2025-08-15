@@ -17,8 +17,12 @@
     justify-self: center;
     align-self: center;
   }
-  &-navigation_end {
-    justify-self: end;
+  &-navigation {
+    margin-left: -16px;
+    &_end {
+      justify-self: end;
+      margin-right: -16px;
+    }
   }
 }
 @media(min-width: 992px) {

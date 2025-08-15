@@ -1,0 +1,17 @@
+.breadcrumbs {
+  &__list {
+    display: flex;
+    column-gap: 4px;
+    font-size: 13px;
+    color: #797878;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+  }
+}
+
+.paddings {
+  padding: 24px 0 24px;
+}

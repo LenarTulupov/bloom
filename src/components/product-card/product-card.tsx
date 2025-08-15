@@ -6,7 +6,6 @@ import Icon from "../icon/icon";
 import Button from "../ui/buttons/button/button";
 import ColorIndicator from "../ui/color-indicator/color-indicator";
 import Price from "../ui/price/price";
-import styles from "./product-card.module.scss";
 import ItemTitle from "../ui/item-title/item-title";
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import {
@@ -14,6 +13,7 @@ import {
   isProductInWishlist,
 } from "@/store/features/wishlist-slice";
 import { IWishlist } from "@/types/wishlist.interface";
+import styles from "./product-card.module.scss";
 
 export default function ProductCard({ product }: { product: IProduct }) {
   const { title, thumbnail, price_new, price_old, color } = product;

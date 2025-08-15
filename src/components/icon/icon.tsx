@@ -6,7 +6,7 @@ import styles from "./icon.module.scss";
 
 interface IIcon {
   name: string;
-  color?: "primary" | "white";
+  color?: "primary" | "white" | "gray";
   size?: "xs" | "sm" | "md" | "lg" | "xl";
   className?: string;
 }

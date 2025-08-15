@@ -5,9 +5,10 @@ import Title from "@/components/ui/title/title";
 import ProductsGrid from "@/components/ui/products-grid/products-grid";
 import ProductCard from "@/components/product-card/product-card";
 import { useAppSelector } from "@/store/hooks";
-import styles from "./wishlist-section.module.scss";
 import { IWishlist } from "@/types/wishlist.interface";
 import EmptyMessage from "@/components/ui/empty-message/empty-message";
+import Breadcrumbs from "@/components/breadcrumbs/breadcrumbs";
+import styles from "./wishlist-section.module.scss";
 
 export default function WishlistSection() {
   const wishlist = useAppSelector(
@@ -18,7 +19,8 @@ export default function WishlistSection() {
     <section>
       <Container>
         <div className={styles["wishlist-section__content"]}>
-          <Title uppercase>Wishlist</Title>
+          <Breadcrumbs/>
+          <Title uppercase bold>Wishlist</Title>
           {wishlist.length === 0 ? (
             <EmptyMessage>Your wishlist is empty.</EmptyMessage>
           ) : (

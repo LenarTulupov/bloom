@@ -1,5 +1,6 @@
 "use client"
 
+import Breadcrumbs from "@/components/breadcrumbs/breadcrumbs";
 import ProductCard from "@/components/product-card/product-card";
 import Container from "@/components/ui/container/container";
 import ProductsGrid from "@/components/ui/products-grid/products-grid";
@@ -23,14 +24,15 @@ export default function AllClothing() {
     return <div>Error: {error}</div>
   }
   return (
-    <div>
+    <>
       <Container>
+        <Breadcrumbs/>
         <ProductsGrid>
           {products.map((product) => (
             <ProductCard key={product.id} product={product}/>
           ))}
         </ProductsGrid>
       </Container>
-    </div>
+    </>
   )
 }
