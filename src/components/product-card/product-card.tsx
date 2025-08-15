@@ -13,6 +13,7 @@ import {
   isProductInWishlist,
 } from "@/store/features/wishlist-slice";
 import { IWishlist } from "@/types/wishlist.interface";
+import slugify from 'slugify'
 import styles from "./product-card.module.scss";
 
 export default function ProductCard({ product }: { product: IProduct }) {
@@ -22,6 +23,8 @@ export default function ProductCard({ product }: { product: IProduct }) {
   const isInWishlist = useAppSelector((state: { wishlistState: IWishlist }) =>
     isProductInWishlist(state, product.id)
   );
+
+  const slug = slugify(title, { lower: true, strict: true });
 
   const onMouseEnter = () => {
     setShowQuickView(true);
@@ -41,7 +44,7 @@ export default function ProductCard({ product }: { product: IProduct }) {
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
-      <Link href="#!">
+      <Link href={`/products/${slug}`}>
         <div className={styles["product-card__img-wrapper"]}>
           <Image
             className={styles["product-card__img"]}

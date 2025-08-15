@@ -22,7 +22,7 @@ export default function WishlistSection() {
           <Breadcrumbs/>
           <Title uppercase bold>Wishlist</Title>
           {wishlist.length === 0 ? (
-            <EmptyMessage>Your wishlist is empty.</EmptyMessage>
+            <EmptyMessage className={styles['empty-message']}>Your wishlist is empty.</EmptyMessage>
           ) : (
             <ProductsGrid>
               {wishlist.map((product) => (

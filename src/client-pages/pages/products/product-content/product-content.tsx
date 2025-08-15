@@ -8,6 +8,7 @@ interface IProductContent {
 }
 
 export default function ProductContent({ product }: IProductContent) {
+  console.log(product)
   const { title, /* thumbnail */ } = product;
   return (
     <div className={styles.product__content}>

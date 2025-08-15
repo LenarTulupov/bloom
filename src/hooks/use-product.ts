@@ -10,7 +10,7 @@ export function useProduct() {
   const [product, setProduct] = useState<IProduct | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>('');
-  const { id } = useParams<{ id: string }>();
+  const { slug } = useParams<{ slug: string }>();
   
   useEffect(() => {
     async function getProduct() {
@@ -18,7 +18,7 @@ export function useProduct() {
       setError('');
       
       try {
-        const response = await fetch(`${URL}${API_ENDPOINTS.PRODUCTS}/${id}`)
+        const response = await fetch(`${URL}${API_ENDPOINTS.PRODUCTS}/${slug}`)
       if(!response.ok) {
         throw new Error("Failed to fetch product" + response.status);
       }
@@ -34,9 +34,9 @@ export function useProduct() {
       setLoading(false);
     }
   }
-  if(id) {
+  if(slug) {
     getProduct();
   }
-}, [id]);
+}, [slug]);
   return { product, loading, error }
 }
